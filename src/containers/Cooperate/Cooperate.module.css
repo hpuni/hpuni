@@ -1,0 +1,50 @@
+.container {
+  background-image: url("../../assets/cooperate-bg.png");
+  background-color: #151515;
+}
+
+.inner {
+  margin-left: 12.431vw;
+  border-left: 1px solid #5b5b5b;
+  padding: 3.472vw 0vw 3.472vw 3.819vw;
+}
+
+.articles {
+  display: flex;
+  gap: 1.667vw;
+}
+
+.article {
+  width: 36.528vw;
+  padding-left: 2.014vw;
+}
+
+.name {
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #ffffff;
+  padding-left: 1.389vw;
+  padding-right: 0.694vw;
+}
+
+.omon {
+  width: 36.528vw;
+}
+
+@media screen and (max-width: 640px) {
+  .inner {
+    margin-left: 0vw;
+  }
+  .article {
+    width: 78.933vw;
+  }
+  .omon {
+    width: 78.933vw;
+  }
+  .name {
+    font-size: 3.733vw;
+    line-height: 140%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

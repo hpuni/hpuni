@@ -1,0 +1,95 @@
+.container {
+  background-image: url("../../assets/stat-bg.png");
+  box-shadow: 0vw 4.861vw 4.861vw #000000;
+  background-color: #151515;
+  background-size: 100vw;
+}
+
+.inner {
+  margin-left: 12.431vw;
+  border-left: 1px solid #5b5b5b;
+  padding: 5.556vw 0vw 5.556vw 3.958vw;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 6.597vw 12.847vw 11.806vw 14.583vw;
+  column-gap: 3.819vw;
+}
+
+.text {
+  font-size: 0.972vw;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.number {
+  font-weight: 900;
+  font-size: 3.889vw;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Normalidad";
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 20.556vw 15.972vw 15.972vw;
+  margin-top: 3.889vw;
+  column-gap: 1.389vw;
+}
+
+.button:first-child {
+  margin-right: 6.944vw;
+}
+
+.iconButtons {
+  display: flex;
+  gap: 1.667vw;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    background-image: url("../../assets/statBackMob.png");
+    background-size: cover;
+  }
+  .inner {
+    margin-left: 0;
+    padding: 11.2vw 12.533vw;
+  }
+
+  .top {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+    gap: 16vw;
+    max-width: 56vw;
+  }
+  .number {
+    font-size: 14.933vw;
+    line-height: 120%;
+  }
+  .text {
+    font-size: 3.733vw;
+    line-height: 120%;
+  }
+  .bottom {
+    display: grid;
+    grid-template-columns: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 4.8vw;
+    margin-top: 13.333vw;
+  }
+  .iconButtons {
+    margin-top: 8.267vw;
+    height: 28.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: unset;
+  }
+}

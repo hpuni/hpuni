@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800&display=swap");
+@font-face {
+  font-family: "Normalidad";
+  font-style: bold;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Normalidad'), url("./assets/fonts/NormalidadBlack.woff2") format("woff2");
+}
+  
+@font-face {
+  font-family: "Normalidad";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Normalidad'), url("./assets/fonts/NormalidadNormal.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}

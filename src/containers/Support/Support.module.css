@@ -1,0 +1,131 @@
+.container {
+  background-image: url("../../assets/dots-bg.png");
+}
+
+.inner {
+  margin-left: 12.431vw;
+  border-left: 1px solid #5b5b5b;
+  padding: 6.25vw 17.014vw 10.417vw 10.625vw;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 4.167vw;
+  height: 0.139vw;
+  background: #d00a00;
+}
+
+.petition {
+  font-family: "Normalidad";
+  font-weight: 900;
+  font-size: 1.111vw;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #d00a00;
+  margin-left: 0.833vw;
+}
+
+.title {
+  font-family: "Normalidad";
+  font-weight: 900;
+  font-size: 2.222vw;
+  line-height: 126%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 1.667vw;
+}
+
+.text {
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  margin-top: 1.528vw;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 4.583vw;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  margin-left: 6.458vw;
+  font-size: 56px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.number p:first-child {
+  font-weight: 900;
+  font-size: 3.889vw;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Normalidad";
+}
+
+.number p:last-child {
+  font-size: 1.111vw;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: 1.111vw;
+}
+
+@media screen and (max-width: 640px) {
+  .inner {
+    margin-left: 0;
+    padding: 4.8vw;
+    padding-bottom: 13.333vw;
+  }
+  .petition {
+    font-size: 3.2vw;
+    line-height: 120%;
+  }
+  .line {
+    width: 13.333vw;
+  }
+  .title {
+    font-size: 5.867vw;
+    line-height: 126%;
+    margin-top: 6.133vw;
+  }
+  .text {
+    font-size: 4.8vw;
+    line-height: 140%;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .number {
+    margin-left: 0;
+    flex-direction: column;
+    margin-top: 15.733vw;
+    position: relative;
+    color: #ffffff;
+    font-size: 12.267vw;
+    color: #ffffff;
+  }
+  .number p {
+    font-size: 3.733vw;
+    line-height: 130%;
+  }
+  .signed {
+    font-size: 3.733vw !important;
+    line-height: 130% !important;
+    text-align: center;
+    margin-top: 3.467vw;
+    font-weight: 400 !important;
+  }
+}

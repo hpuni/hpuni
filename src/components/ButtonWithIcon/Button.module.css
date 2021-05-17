@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.208vw;
+  text-decoration: none;
+}
+
+.text,
+.textSmall {
+  font-size: 1.042vw;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #e2e2e2;
+  padding: 1.319vw 1.944vw;
+  font-family: "Normalidad";
+}
+
+.white,
+.whiteSmall {
+  background-color: #e2e2e2;
+  width: 3.889vw;
+  height: 3.889vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 2.083vw;
+  height: 2.083vw;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: none;
+  }
+  .text {
+    font-size: 4vw;
+    line-height: unset;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #e2e2e2;
+    padding: 4.267vw 5.867vw;
+    width: 100%;
+    font-family: "Normalidad";
+    line-height: 140%;
+  }
+  .textSmall {
+    font-size: 2.933vw;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #e2e2e2;
+    padding: 4.267vw 5.867vw;
+    width: 100%;
+    font-family: "Normalidad";
+  }
+  .white {
+    min-width: 14.933vw;
+    height: 14.933vw;
+  }
+    .whiteSmall {
+    min-width: 12vw;
+    height: 12vw;
+  }
+  .icon {
+    width: 6.667vw;
+    height: 6.667vw;
+  }
+}

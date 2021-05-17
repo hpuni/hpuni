@@ -1,0 +1,157 @@
+.container {
+  background-color: #151515;
+}
+
+.inner {
+  margin-left: 12.431vw;
+  border-left: 1px solid #5b5b5b;
+  padding: 6.944vw 3.889vw 4.306vw 3.889vw;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 4.167vw;
+  height: 0.139vw;
+  background: #d00a00;
+}
+
+.petition {
+  font-family: "Normalidad";
+  font-weight: 900;
+  font-size: 1.111vw;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #d00a00;
+  margin-left: 0.833vw;
+}
+
+.title {
+  font-family: "Normalidad";
+  font-weight: 900;
+  font-size: 2.222vw;
+  line-height: 126%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 1.667vw;
+}
+
+.text {
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  margin-top: 1.528vw;
+}
+
+.choose {
+  margin-top: 3.889vw;
+}
+
+.chooseText {
+  font-size: 0.903vw;
+  line-height: 140%;
+  color: #a5a5a5;
+  margin-bottom: 1.111vw;
+}
+
+.Select {
+  background-color: transparent;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  background-color: #212121;
+  display: grid;
+  grid-template-columns: 1fr 30.556vw;
+  gap: 1.528vw;
+  padding: 1.042vw 1.181vw;
+  margin-bottom: 0.833vw;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.042vw;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #e2e2e2;
+}
+
+.university {
+  background: #363636;
+  border-radius: 0.208vw;
+  font-weight: 500;
+  font-size: 1.042vw;
+  line-height: 120%;
+  color: #e2e2e2;
+  padding: 0.556vw 0.833vw;
+  width: fit-content;
+}
+
+.icon {
+  width: 1.389vw;
+}
+
+@media screen and (max-width: 640px) {
+  .Select div {
+    width: 86.4vw;
+  }
+  .inner {
+    margin-left: 0;
+  }
+  .petition {
+    font-size: 3.2vw;
+    line-height: 120%;
+  }
+  .line {
+    width: 13.333vw;
+  }
+  .title {
+    font-size: 5.867vw;
+    line-height: 126%;
+    margin-top: 6.133vw;
+  }
+  .text {
+    font-size: 4.8vw;
+    line-height: 140%;
+  }
+  .chooseText {
+    font-size: 2.933vw;
+    line-height: 140%;
+    margin-bottom: 2.133vw;
+  }
+  .choose {
+    margin-top: 8vw;
+  }
+  .block {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    padding: 3.2vw 2.933vw;
+  }
+  .name {
+    font-size: 4vw;
+  }
+  .universities {
+    margin-top: 8vw;
+    display: flex;
+    gap: 2.133vw;
+  }
+  .university {
+    font-size: 4vw;
+    padding: 2.133vw 3.2vw;
+  }
+  .blocks {
+    gap: 3.2vw;
+  }
+}

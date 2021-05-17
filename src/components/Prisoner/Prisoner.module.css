@@ -1,0 +1,57 @@
+.container {
+  background-image: url("../../assets/frame.png");
+  background-size: cover;
+  width: 25.694vw;
+  box-shadow: 0.139vw 0.278vw 2.778vw rgba(0, 0, 0, 0.4);
+  border-radius: 0.208vw;
+}
+
+.image {
+  height: 21.25vw;
+  width: 21.25vw;
+  background-size: cover;
+}
+
+.inner {
+  padding: 2.083vw 2.153vw 3.403vw 2.153vw;
+}
+
+.sentence {
+  background-color: #d8d8d8;
+  border-radius: 0.139vw;
+  font-size: 0.833vw;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #151515;
+  padding: 0.417vw 0.556vw;
+  border: none;
+  margin-top: 1.667vw;
+  font-family: "Normalidad";
+}
+
+.name {
+  margin-top: 1.667vw;
+  font-weight: 900;
+  font-size: 1.389vw;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Normalidad";
+}
+
+.university {
+  font-size: 0.972vw;
+  line-height: 120%;
+  font-family: "Normalidad";
+  color: #cacaca;
+  margin-top: 0.556vw;
+}
+
+.text {
+  font-size: 1.111vw;
+  line-height: 140%;
+  color: #ffffff;
+  margin-top: 1.944vw;
+}

@@ -1,0 +1,187 @@
+.container {
+  background-image: url("../../assets/dots-bg.png");
+  margin-top: -0.069vw;
+}
+
+.inner {
+  margin-left: 12.431vw;
+  border-left: 1px solid #5b5b5b;
+  padding: 4.167vw 17.014vw 5.556vw 3.958vw;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 4.167vw;
+  height: 0.139vw;
+  background: #d00a00;
+}
+
+.petition {
+  font-family: "Normalidad";
+  font-weight: 900;
+  font-size: 1.111vw;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #d00a00;
+  margin-left: 0.833vw;
+}
+
+.title {
+  font-family: "Normalidad";
+  font-weight: 900;
+  font-size: 2.222vw;
+  line-height: 126%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 1.667vw;
+}
+
+.text {
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  margin-top: 1.528vw;
+}
+
+.bottom {
+  margin-top: 4.167vw;
+}
+
+.data {
+  font-size: 1.528vw;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.764vw;
+  margin-top: 1.528vw;
+}
+
+.button {
+  background-color: #222222;
+  border-radius: 0.208vw;
+  padding: 0.972vw 1.111vw;
+  font-family: "Normalidad";
+  font-size: 1.111vw;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  color: #cacaca;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #5b5b5b;
+  color: #ffffff;
+}
+
+.buttonActive {
+  background-color: #ffffff;
+  border-radius: 0.208vw;
+  padding: 0.972vw 1.111vw;
+  font-family: "Normalidad";
+  font-size: 1.111vw;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  color: #151515;
+  cursor: pointer;
+  outline: none;
+}
+
+.looka {
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  cursor: pointer;
+  outline: none;
+}
+
+.lookaActive {
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #c40a00;
+  cursor: pointer;
+}
+
+.block {
+  background: rgba(12, 12, 12, 0.9);
+  border: 1px solid #5b5b5b;
+  box-shadow: 0.139vw 0.278vw 2.778vw rgba(0, 0, 0, 0.5);
+  border-radius: 0.417vw;
+  padding: 2.5vw 2.083vw 2.222vw 2.778vw;
+  font-size: 1.111vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  position: absolute;
+  width: 38.958vw;
+  margin-left: 30.069vw;
+}
+
+@media screen and (max-width: 640px) {
+  .inner {
+    margin-left: 0;
+    padding-left: 4.267vw;
+    padding-right: 5.333vw;
+  }
+  .line {
+    width: 13.333vw;
+  }
+  .petition {
+    font-size: 3.2vw;
+    line-height: 120%;
+  }
+  .title {
+    font-size: 5.867vw;
+    line-height: 126%;
+    margin-top: 6.133vw;
+  }
+  .text {
+    font-size: 4.8vw;
+    line-height: 140%;
+  }
+  .looka {
+    font-size: 4.8vw;
+    line-height: 140%;
+  }
+  .block {
+    font-size: 4.8vw;
+    line-height: 140%;
+    margin-left: 0;
+    width: 86.667vw;
+  }
+  .data {
+    font-size: 4.533vw;
+    line-height: 126%;
+    margin-top: 25.067vw;
+    font-weight: 500;
+  }
+  .buttons {
+    grid-gap: 2.667vw;
+    flex-wrap: wrap;
+    margin-top: 4.8vw;
+  }
+  .button {
+    font-size: 4.267vw;
+    line-height: 120%;
+    padding: 3.2vw 3.467vw;
+  }
+}

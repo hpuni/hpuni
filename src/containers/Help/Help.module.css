@@ -1,0 +1,85 @@
+.container {
+  background-color: #151515;
+  margin-top: -0.069vw;
+}
+
+.inner {
+  margin-left: 12.431vw;
+  border-left: 1px solid #363636;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2.222vw;
+  line-height: 126%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #e2e2e2;
+  font-family: "Normalidad";
+}
+
+.left {
+  padding: 11.111vw 3.889vw;
+}
+
+.text {
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  margin-top: 1.528vw;
+  width: 38.194vw;
+  margin-bottom: 4.167vw;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.texture {
+  width: 34.722vw;
+}
+.textureMob {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+  .inner {
+    margin-left: 0;
+    padding: 33.333vw 4.8vw;
+  }
+  .textureMob {
+    height: 136.533vw;
+    width: 114.667vw;
+    position: absolute;
+    right: -36vw;
+    margin-top: 16vw;    display: block;
+  }
+  .title {
+    font-size: 5.867vw;
+    line-height: 126%;
+  }
+  .text {
+    font-size: 4.8vw;
+    line-height: 140%;
+    width: 85.333vw;
+    margin-top: 6.4vw;
+  }
+  .texture {
+    display: none;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 6.4vw;
+    margin-top: 8.533vw;
+  }
+  .left {
+    padding-left: 0;
+  }
+}
