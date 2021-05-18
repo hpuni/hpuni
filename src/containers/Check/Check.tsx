@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
 import { useTranslation } from "react-i18next";
 
-import useWindowSize from '../../helpers/windowSize'
+import useWindowSize from "../../helpers/windowSize";
 import icon from "../../assets/filter-icon.svg";
 
 import s from "./Check.module.css";
@@ -15,7 +15,7 @@ type Data = {
 };
 
 const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const [countriesData, setCountriesData] = useState<any>([]);
   const [citiesData, setCitiesData] = useState<any>([]);
@@ -44,14 +44,13 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
     }
   }, [countries, cities, partners, belUnis]);
 
-
-    const width = useWindowSize();
-    const isMobile = width <= 640;
+  const width = useWindowSize();
+  const isMobile = width <= 640;
 
   const customStyles = {
     container: (provided: any, state: any) => ({
       ...provided,
-      width: isMobile ? '86.667vw' : "40.556vw",
+      width: isMobile ? "86.667vw" : "40.556vw",
       background: "#151515",
       color: "#ffffff",
       marginBottom: isMobile ? "4.267vw" : "1.111vw",
@@ -78,6 +77,8 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
       padding: 18,
       borderBottom: "1px solid #313131",
       cursor: "pointer",
+      fontFamily: "Normalidad",
+
       "&:hover": {
         backgroundColor: "#363636",
       },
@@ -87,18 +88,20 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
     }),
     placeholder: () => ({
       color: "#ffffff !important",
+      fontFamily: "Normalidad",
     }),
   };
   const DropdownIndicator = (props: any) => {
     return (
       <components.DropdownIndicator {...props}>
-        <img src={icon} alt="icon" className={s.icon}/>
+        <img src={icon} alt="icon" className={s.icon} />
       </components.DropdownIndicator>
     );
   };
 
   function chooseCountry(value: any) {
     setChosenCountry(value);
+    setChosenCity({})
   }
   function chooseCity(value: any) {
     setChosenCity(value);
@@ -129,7 +132,6 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
     return { value: item.id, label: item.name };
   });
 
-
   return (
     <div className={s.container} id="check">
       <div className={s.inner}>
@@ -137,16 +139,10 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
           <div className={s.line} />
           <p className={s.petition}>{t("uniCheck")}</p>
         </div>
-        <p className={s.title}>
-          {t("isCoop")}
-        </p>
-        <p className={s.text}>
-          {t("list")}
-        </p>
+        <p className={s.title}>{t("isCoop")}</p>
+        <p className={s.text}>{t("list")}</p>
         <div className={s.choose}>
-          <p className={s.chooseText}>
-            {t("choose")}
-          </p>
+          {/* <p className={s.chooseText}>{t("choose")}</p> */}
           <Select
             options={countriesOptions}
             styles={customStyles}
@@ -160,6 +156,7 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
             components={{ DropdownIndicator }}
             onChange={chooseCity}
             className="Select"
+            value={chosenCity.value ? chosenCity : "Select..."}
           />
           <div className={s.blocks}>
             {partnersList.map((item: any) => {

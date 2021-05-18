@@ -38,7 +38,7 @@ const Footer = () => {
         <div className={s.text}>
           <p style={{display: "flex"}}>
 
-          {t("build")} <p>{" "} | </p>
+          {t("build")} {"   "} | 
           </p>
           <a
             href="https://honest-people.by"
@@ -49,7 +49,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className={s.bottom} />
+      {/* <div className={s.bottom} /> */}
     </div>
   );
 };

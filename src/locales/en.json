@@ -15,7 +15,7 @@
     "uniCheck": "University check",
     "isCoop": "Does your university cooperate with Belarusian universities?",
     "choose": "Select your country to find out the list of partner universities.",
-    "list": "Universities that cooperate with Belarusian universities: finance activities, plan joint programs, and share common values.",
+    "list": "Select your country and city to find out universities from your city that cooperate with Belarusian ones: they fund activities, plan joint programs, share common values.",
     "ifYour": "If your university",
     "is": "is",
     "onTheList": "on the list",
@@ -26,7 +26,7 @@
     "wait": "What should you expect during the program?",
     "waitText": "In Belarus, universities are not independent. The university administration does not protect students, but carries out the orders of the dictator ",
     "dictator": " A. Lukashenko: ",
-    "vibory": "",
+    "vibory": "In August 2020, elections were rigged in Belarus. In response, Belarusians went to peaceful protests. But the state unleashed a wave of repression: thousands of people were imprisoned, beaten and maimed. Any dissent is now persecuted in Belarus. People are arrested for clothes of national colors, reading books in Belarusian and singing folk songs. The administrations of Belarusian universities do not protect students, but facilitate repression.",
     "rectors": " rectors and deans expel students, dismiss teachers, call riot police on the protesters, and report to the police.",
     "data": "Беларуские университеты сегодня:",
     "political": "students are recognized as political prisoners",
@@ -48,5 +48,5 @@
     "joinButton": "join",
     "helpPeople": "Help the community of the Honest People.",
     "organize": "Activists provide assistance to affected students and teachers. The organization exists through donations.",
-    "build": "Building civil society together "
+    "build": "Building civil society together   "
 }

@@ -38,19 +38,24 @@ const History: React.FC<Props> = ({ stories }) => {
     }
   }, [i18n.language]);
 
-  console.warn(selectedStudentData);
-
   return (
     <div className={s.container}>
       <div className={s.inner}>
         <div className={s.top}>
           <p className={s.title}>{t("politicalZak")}</p>
-          <img src={vyasna} alt="vyasna" className={s.vyasna} />
+          <div className={s.vyasnaBlock}>
+            <p className={s.vyasnaText}>
+              {" "}
+              Данные предоставлены правозащитным центром{" "}
+            </p>
+            <img src={vyasna} alt="vyasna" className={s.vyasna} />
+          </div>
         </div>
         <p className={s.text}>
           {t("meet")} <strong>{t("meetStrong")}</strong> <br />
           {t("vzglyad")}
         </p>
+
         <img src={vyasna} alt="vyasna" className={s.vyasnaMob} />
 
         <div className={s.info}>

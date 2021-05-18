@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
+//@ts-ignore
+import Tabletop from "tabletop";
 
 import mock from "../../assets/mock_video.png";
 import texture from "../../assets/bg-texture.png";
@@ -20,6 +22,17 @@ const Main = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
   const [isOpenLang, setOpenLang] = useState(false);
   const [chosenLang, setLang] = useState("ru");
+  const [petitionNumber, setPetitionNumber] = useState([]);
+
+  useEffect(() => {
+    Tabletop.init({
+      key:
+        "https://docs.google.com/spreadsheets/d/1H4n9GGyiCQAupuknOVfZfOx0jVP_oycgkz7U27JFc2Q/edit?usp=sharing",
+      simpleSheet: true,
+    }).then((data: any) => {
+      setPetitionNumber(data[0].Number);
+    });
+  }, []);
 
   useEffect(() => {
     if (i18n.language) {
@@ -101,7 +114,7 @@ const Main = () => {
             {t("expelled")}
           </div>
           <div className={s.statBlock}>
-            <p className={s.number}>459</p>
+          <p className={s.number}>{petitionNumber}</p>
             {t("signed")}
           </div>
           <button className={s.lang} onClick={handleOpenLangSwitcher}>
@@ -138,25 +151,29 @@ const Main = () => {
               {t("expelled")}
             </div>
             <div className={s.statBlockMob}>
-              <p className={s.number}>459</p>
+            <p className={s.number}>{petitionNumber}</p>
               {t("signed")}
             </div>
           </div>
         </div>
         <div className={s.titleMob}>EXTREME STUDENT EXCHANGE</div>
         <div className={s.top}>
-          <div className={s.video}>
-            <img src={mock} className={s.video} />
+          <div className={s.videoBlock}>
             <p className={s.title}>
               EXTREME STUDENT <br /> EXCHANGE
             </p>
+            <img src={mock} className={s.video} />
           </div>
           <p className={s.edition}>
             2021 <p className={s.belarus}>Belarus Edition</p>
           </p>
         </div>
         <p className={s.cooperate} dangerouslySetInnerHTML={createTitle()} />
-        <p className={s.text}>{t("invite")}</p>
+        <p className={s.text}>
+          {t("invite")}
+          <br />
+          {t("signPetition")}
+        </p>
         <div className={s.buttons}>
           <div className={s.buttonSubs}>
             <Button text={t("sign")} />
