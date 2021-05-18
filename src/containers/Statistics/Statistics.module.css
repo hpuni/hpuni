@@ -13,7 +13,7 @@
 
 .top {
   display: grid;
-  grid-template-columns: 6.597vw 12.847vw 11.806vw 14.583vw;
+  grid-template-columns: 12.597vw 12.847vw 11.806vw 14.583vw;
   column-gap: 3.819vw;
 }
 

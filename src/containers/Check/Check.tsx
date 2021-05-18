@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
+import { useTranslation } from "react-i18next";
 
 import useWindowSize from '../../helpers/windowSize'
 import icon from "../../assets/filter-icon.svg";
@@ -14,6 +15,8 @@ type Data = {
 };
 
 const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
+    const { t } = useTranslation();
+
   const [countriesData, setCountriesData] = useState<any>([]);
   const [citiesData, setCitiesData] = useState<any>([]);
   const [partnersData, setPartnersData] = useState<any>([]);
@@ -132,19 +135,17 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
       <div className={s.inner}>
         <div className={s.top}>
           <div className={s.line} />
-          <p className={s.petition}>Проверка Университета</p>
+          <p className={s.petition}>{t("uniCheck")}</p>
         </div>
         <p className={s.title}>
-          Сотрудничает ли ваш университет с беларускими вузами?
+          {t("isCoop")}
         </p>
         <p className={s.text}>
-          Эти университеты сотрудничают с беларускими: финансируют деятельность,
-          планируют <br /> совместные программы, разделяют общие ценности.
+          {t("list")}
         </p>
         <div className={s.choose}>
           <p className={s.chooseText}>
-            Выберите вашу страну и город, чтобы узнать список
-            университетов-партнёров.
+            {t("choose")}
           </p>
           <Select
             options={countriesOptions}

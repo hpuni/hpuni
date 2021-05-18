@@ -7,10 +7,13 @@ import Vk from "../../assets/Vk";
 import Yt from "../../assets/Yt";
 import Ok from "../../assets/Ok";
 import Viber from "../../assets/Viber";
+import { useTranslation } from "react-i18next";
 
 import s from "./Footer.module.css";
 
 const Footer = () => {
+      const { t } = useTranslation();
+
   const [isEntered, setEntered] = React.useState("");
   const handleSetEntered = (value: string) => {
     setEntered(value);
@@ -35,7 +38,7 @@ const Footer = () => {
         <div className={s.text}>
           <p style={{display: "flex"}}>
 
-          Строим гражданское общество вместе <p> | </p>
+          {t("build")} <p>{" "} | </p>
           </p>
           <a
             href="https://honest-people.by"

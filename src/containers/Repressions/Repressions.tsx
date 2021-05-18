@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import Statistics from "../Statistics/Statistics";
 import cn from "classnames";
 
@@ -9,6 +11,10 @@ type Data = {
 };
 
 const Repressions: React.FC<Data> = ({ universities }) => {
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language
+
   const [data, setData] = useState([]);
   const [active, setActive] = useState("all");
   const [allPoliticalPrisoners, setAllPoliticalPrisoners] = useState(0);
@@ -60,43 +66,29 @@ const Repressions: React.FC<Data> = ({ universities }) => {
         <div className={s.inner}>
           <div className={s.top}>
             <div className={s.line} />
-            <p className={s.petition}>Репрессии</p>
+            <p className={s.petition}>{t("repressions")}</p>
           </div>
-          <p className={s.title}>ЧТО ЖДЁТ ВАС НА ПРОГРАММЕ?</p>
+          <p className={s.title}>{t("wait")}</p>
           <p className={s.text}>
-            В Беларуси у университетов нет автономии. Администрация не защищает{" "}
-            <br />
-            студентов, а выполняет приказы диктатора{" "}
+            {t("waitText")}
             <button
               className={cn(isClicked && s.lookaActive, s.looka)}
               onClick={() => setClicked(!isClicked)}
             >
               {" "}
-              А. Лукашенко
+              {t("dictator")}{" "}
             </button>
-            :{" "}
-            {isClicked && (
-              <div className={s.block}>
-                В 2020 году в Беларуси были сфальсифицированы выборы. После
-                начавшихся массовых мирных протестов, власти развернули террор
-                против граждан. Тысячи людей были посажены в тюрьмы, избиты и
-                искалечены. С того времени в Беларуси жёстко преследуется любое
-                инакомыслие. Людей арестовывают за одежду национальных цветов,
-                чтение книг на беларуском языке и пение народных песен.
-              </div>
-            )}
-            ректоры и деканы <br /> отчисляют студентов, увольняют
-            преподавателей, вызывают на протестующих <br /> ОМОН, пишут
-            заявления в милицию.
+            {isClicked && <div className={s.block}>{t("vibory")}</div>}
+            {t("rectors")}
           </p>
           <div className={s.bottom}>
-            <p className={s.data}> Данные о репрессиях по всей Беларуси</p>
+            <p className={s.data}> {t("data")}</p>
             <div className={s.buttons}>
               <button
                 className={cn(active === "all" && s.buttonActive, s.button)}
                 onClick={() => setActive("all")}
               >
-                ВСЕ
+                {t("all")}
               </button>
               {data.map((item: any) => {
                 return (
@@ -108,7 +100,7 @@ const Repressions: React.FC<Data> = ({ universities }) => {
                     key={item?.id}
                     onClick={() => setActive(item.id)}
                   >
-                    {item.name_abr_ru}
+                    {lang === 'en' ? item.name_abr_en : item.name_abr_ru}
                   </button>
                 );
               })}

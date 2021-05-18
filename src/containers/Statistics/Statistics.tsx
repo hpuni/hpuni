@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import s from "./Statistics.module.css";
 import Button from "../../components/Button/Button";
@@ -19,46 +20,48 @@ const Statistics: React.FC<Props> = ({
   fired,
   repressed,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={s.container}>
       <div className={s.inner}>
         <div className={s.top}>
           <div className={s.line}>
             <p className={s.number}>{political}</p>
-            <p className={s.text}>политические заключённые</p>
+            <p className={s.text}>{t("political")}</p>
           </div>
           <div className={s.line}>
             <p className={s.number}>{expelled}</p>
             <p className={s.text}>
-              студентов отчислены из-за гражданской позиции
+              {t("studExpelled")}
             </p>
           </div>
           <div className={s.line}>
             <p className={s.number}>{fired}</p>
             <p className={s.text}>
-              преподавателей уволены за поддержку студентов
+              {t('teachers')}
             </p>
           </div>
           <div className={s.line}>
             <p className={s.number}>{repressed}</p>
             <p className={s.text}>
-              студентов пострадали за свою гражданскую позицию
+              {t('applied')}
             </p>
           </div>
         </div>
         <div className={s.bottom}>
           <div className={s.bottomBlock}>
-            <Button text="Подписать петицию" />
+            <Button text={t("sign")} />
           </div>
           <div className={s.iconButtons}>
             <IconButton
-              text="рассказать"
+              text={t("tell")}
               icon={fb}
               isSmall
               href="https://www.facebook.com/sharer/sharer.php?u=example.org"
             />
             <IconButton
-              text="рассказать"
+              text={t("tell")}
               icon={twitter}
               isSmall
               href="http://twitter.com/share"

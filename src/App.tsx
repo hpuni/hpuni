@@ -25,8 +25,6 @@ function App() {
     getData();
   }, []);
 
-  console.warn(data)
-
   return (
     <>
       <Main />

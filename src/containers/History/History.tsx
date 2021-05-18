@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import cn from "classnames";
+import { useTranslation } from "react-i18next";
 
 import vyasna from "../../assets/vyasna.png";
 import Prisoner from "../../components/Prisoner/Prisoner";
@@ -14,6 +15,9 @@ type Props = {
 
 const History: React.FC<Props> = ({ stories }) => {
   const [data, setData] = useState<any>([]);
+  const { t, i18n } = useTranslation();
+  const [lang, setLang] = useState<string>();
+
   const [selectedStudent, setSelectedStudent] = useState<string>();
   useEffect(() => {
     if (stories) {
@@ -28,17 +32,24 @@ const History: React.FC<Props> = ({ stories }) => {
   const width = useWindowSize();
   const isMobile = width <= 640;
 
+  useEffect(() => {
+    if (i18n.language) {
+      setLang(i18n.language);
+    }
+  }, [i18n.language]);
+
+  console.warn(selectedStudentData);
+
   return (
     <div className={s.container}>
       <div className={s.inner}>
         <div className={s.top}>
-          <p className={s.title}>Политические истории</p>
+          <p className={s.title}>{t("politicalZak")}</p>
           <img src={vyasna} alt="vyasna" className={s.vyasna} />
         </div>
         <p className={s.text}>
-          Знакомьтесь с беларускими студентами.{" "}
-          <strong>25 из них находятся в тюрьме </strong> <br />
-          из-за своих политических взглядов.
+          {t("meet")} <strong>{t("meetStrong")}</strong> <br />
+          {t("vzglyad")}
         </p>
         <img src={vyasna} alt="vyasna" className={s.vyasnaMob} />
 
@@ -51,24 +62,40 @@ const History: React.FC<Props> = ({ stories }) => {
                   : data[0]?.photo_url
               }
               time={
-                selectedStudentData[0]
+                selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].sanction_ru
-                  : data[0]?.sanction_ru
+                  : selectedStudentData[0] && lang === "en"
+                  ? selectedStudentData[0].sanction_en
+                  : lang === "ru"
+                  ? data[0]?.sanction_ru
+                  : data[0]?.sanction_en
               }
               name={
-                selectedStudentData[0]
+                selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].name_ru
-                  : data[0]?.name_ru
+                  : selectedStudentData[0] && lang === "en"
+                  ? selectedStudentData[0].name_en
+                  : lang === "ru"
+                  ? data[0]?.name_ru
+                  : data[0]?.name_en
               }
               university={
-                selectedStudentData[0]
+                selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].university_ru
-                  : data[0]?.university_ru
+                  : selectedStudentData[0] && lang === "en"
+                  ? selectedStudentData[0].university_en
+                  : lang === "ru"
+                  ? data[0]?.university_ru
+                  : data[0]?.university_en
               }
               text={
-                selectedStudentData[0]
+                selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].story_ru
-                  : data[0]?.story_ru
+                  : selectedStudentData[0] && lang === "en"
+                  ? selectedStudentData[0].story_en
+                  : lang === "ru"
+                  ? data[0]?.story_ru
+                  : data[0]?.story_en
               }
             />
           </div>
@@ -90,20 +117,37 @@ const History: React.FC<Props> = ({ stories }) => {
       </div>
       {selectedStudent && isMobile && (
         <div className={s.prisonerMob}>
-          <img src={cross} alt="cross" className={s.cross} onClick={() => setSelectedStudent(undefined)}/>
+          <img
+            src={cross}
+            alt="cross"
+            className={s.cross}
+            onClick={() => setSelectedStudent(undefined)}
+          />
           <img
             src={selectedStudentData[0]?.photo_url}
             alt="img"
             className={s.photo}
           />
           <button className={s.sentence}>
-            {selectedStudentData[0]?.sanction_ru}{" "}
+            {lang === "en"
+              ? selectedStudentData[0]?.sanction_en
+              : selectedStudentData[0]?.sanction_ru}{" "}
           </button>
-          <p className={s.name}>{selectedStudentData[0]?.name_ru} </p>
-          <p className={s.university}>
-            {selectedStudentData[0]?.university_ru}
+          <p className={s.name}>
+            {lang === "en"
+              ? selectedStudentData[0]?.name_en
+              : selectedStudentData[0]?.name_ru}{" "}
           </p>
-          <p className={s.text}>{selectedStudentData[0]?.story_ru}</p>
+          <p className={s.university}>
+            {lang === "en"
+              ? selectedStudentData[0]?.university_en
+              : selectedStudentData[0]?.university_ru}
+          </p>
+          <p className={s.text}>
+            {lang === "en"
+              ? selectedStudentData[0]?.story_en
+              : selectedStudentData[0]?.story_ru}
+          </p>
         </div>
       )}
     </div>

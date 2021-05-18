@@ -1,20 +1,24 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import Button from "../../components/Button/Button";
 import s from "./ToDo.module.css";
 
 const ToDo = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={s.container}>
       <div className={s.inner}>
-        <p className={s.title}>Что ещё можно сделать?</p>
+        <p className={s.title}>{t("else")}</p>
         <p className={s.text}>
-          Если ты студент или преподаватель из Беларусии выступаешь против
-          репрессий — найди чат-бот
-          <a href="tg://resolve?domain=univer_by_bot" className={s.link}>УНИВЕР</a>{" "}
-          (@univer_by_bot) в телеграм и присоединяйся к движению.
+          {t("bot")}
+          <a href="tg://resolve?domain=univer_by_bot" className={s.link}>
+            {t("univer")}
+          </a>{" "}
+          (@univer_by_bot) {t("join")}
         </p>
-        <Button text="присоедениться" />
+        <Button text={t("joinButton")} />
       </div>
     </div>
   );

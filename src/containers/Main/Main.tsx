@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 
@@ -21,6 +21,12 @@ const Main = () => {
   const [isOpenLang, setOpenLang] = useState(false);
   const [chosenLang, setLang] = useState("ru");
 
+  useEffect(() => {
+    if (i18n.language) {
+      setLang(i18n.language);
+    }
+  }, [i18n.language]);
+
   const handleMenu = () => {
     setOpenMenu(!isOpenMenu);
   };
@@ -36,7 +42,12 @@ const Main = () => {
   const changeLanguage = (lng: any) => {
     i18n.changeLanguage(lng);
     setLang(lng);
+    setOpenLang(false);
   };
+
+  function createTitle() {
+    return { __html: t("cooperate") };
+  }
 
   return (
     <div className={s.container}>
@@ -59,7 +70,7 @@ const Main = () => {
               setActive("check");
             }}
           >
-            Проверка
+            {t("check")}
           </a>
           <a
             className={cn(active === "repression" && s.linkActive, s.link)}
@@ -68,7 +79,7 @@ const Main = () => {
               setActive("repression");
             }}
           >
-            Репрессии
+            {t("repressions")}
           </a>
           <a
             className={cn(active === "petition" && s.linkActive, s.link)}
@@ -77,19 +88,21 @@ const Main = () => {
               setActive("petition");
             }}
           >
-            Петиция
+            {t("petition")}
           </a>
         </div>
         <div className={s.stat}>
           <div className={s.statBlock}>
-            <p className={s.number}>28</p>в тюрьмах
+            <p className={s.number}>28</p>
+            {t("jail")}
           </div>
           <div className={s.statBlock}>
-            <p className={s.number}>274</p>уволено и<br /> отчислено
+            <p className={s.number}>274</p>
+            {t("expelled")}
           </div>
           <div className={s.statBlock}>
-            <p className={s.number}>459</p>подписали
-            <br /> петицию
+            <p className={s.number}>459</p>
+            {t("signed")}
           </div>
           <button className={s.lang} onClick={handleOpenLangSwitcher}>
             {chosenLang.slice(0, 2)} <img src={lang} alt="lang" />
@@ -117,13 +130,16 @@ const Main = () => {
           <div className={s.verticalLine} />
           <div className={s.statBlockInner}>
             <div className={s.statBlockMob}>
-              <p className={s.number}>28</p>в тюрьмах
+              <p className={s.number}>28</p>
+              {t("jail")}
             </div>
             <div className={s.statBlockMob}>
-              <p className={s.number}>274</p>уволено и отчислено
+              <p className={s.number}>274</p>
+              {t("expelled")}
             </div>
             <div className={s.statBlockMob}>
-              <p className={s.number}>459</p>подписали петицию
+              <p className={s.number}>459</p>
+              {t("signed")}
             </div>
           </div>
         </div>
@@ -139,25 +155,25 @@ const Main = () => {
             2021 <p className={s.belarus}>Belarus Edition</p>
           </p>
         </div>
-        <p className={s.cooperate}>
-          Ваш университет <br /> сотрудничает с беларускими?
-        </p>
-        <p className={s.text}>
-          Требуй организовать экстримальный студенческий обмен в Беларусь.
-          <br /> Или подпиши петицию...
-        </p>
+        <p className={s.cooperate} dangerouslySetInnerHTML={createTitle()} />
+        <p className={s.text}>{t("invite")}</p>
         <div className={s.buttons}>
           <div className={s.buttonSubs}>
-            <Button text="Подписать петицию" />
+            <Button text={t("sign")} />
           </div>
           <div className={s.iconButtons}>
             <IconButton
-              text="рассказать"
+              text={t("tell")}
               icon={fb}
               isSmall
               href="https://www.facebook.com/sharer/sharer.php?u=example.org"
             />
-            <IconButton text="рассказать" icon={twitter} isSmall href="http://twitter.com/share"/>
+            <IconButton
+              text={t("tell")}
+              icon={twitter}
+              isSmall
+              href="http://twitter.com/share"
+            />
           </div>
         </div>
       </div>
@@ -182,7 +198,7 @@ const Main = () => {
                 handleCloseMenu();
               }}
             >
-              Главная
+              {t("main")}
             </a>
             <a
               className={cn(active === "check" && s.linkActiveMob, s.linkMob)}
@@ -192,7 +208,7 @@ const Main = () => {
                 handleCloseMenu();
               }}
             >
-              Проверка
+              {t("check")}
             </a>
             <a
               className={cn(
@@ -205,7 +221,7 @@ const Main = () => {
                 handleCloseMenu();
               }}
             >
-              Репрессии
+              {t("repressions")}
             </a>
             <a
               className={cn(
@@ -218,7 +234,7 @@ const Main = () => {
                 handleCloseMenu();
               }}
             >
-              Петиция
+              {t("petition")}
             </a>
           </div>
         </div>

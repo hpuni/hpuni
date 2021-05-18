@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import texture from "../../assets/bg-texture.png";
 import Button from "../../components/ButtonWithIcon/Button";
 import paypal from "../../assets/paypal.svg";
@@ -6,6 +7,8 @@ import fb from "../../assets/rounded-fb.svg";
 import s from "./Help.module.css";
 
 const Help = () => {
+    const { t } = useTranslation();
+
   return (
     <div className={s.container}>
       <img src={texture} alt="texture" className={s.textureMob} />
@@ -13,12 +16,10 @@ const Help = () => {
       <div className={s.inner}>
         <div className={s.left}>
           <p className={s.title}>
-            Помогите сообществу <br />
-            Честные люди
+            {t("helpPeople")}
           </p>
           <p className={s.text}>
-            Активисты организуют помощь пострадавшим студентам и преподавателям.
-            Организация существует за счёт пожертвований.
+           {t("organize")}
           </p>
           <div className={s.buttons}>
             <Button

@@ -38,6 +38,7 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-top: 1.667vw;
+  width: 56.597vw;
 }
 
 .text {
@@ -45,6 +46,7 @@
   line-height: 140%;
   color: #e2e2e2;
   margin-top: 1.528vw;
+  width: 56.597vw;
 }
 
 .choose {
@@ -120,10 +122,12 @@
     font-size: 5.867vw;
     line-height: 126%;
     margin-top: 6.133vw;
+    width: auto;
   }
   .text {
     font-size: 4.8vw;
     line-height: 140%;
+    width: auto;
   }
   .chooseText {
     font-size: 2.933vw;
