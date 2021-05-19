@@ -27,12 +27,14 @@ const Main = () => {
   useEffect(() => {
     Tabletop.init({
       key:
-        "https://docs.google.com/spreadsheets/d/1H4n9GGyiCQAupuknOVfZfOx0jVP_oycgkz7U27JFc2Q/edit?usp=sharing",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlcizEKluVuVa2BtcCAUV1Nh3BAxKCy6GCDtRlV14kg9ENFm3LpToAoj1L0nsICQ-0LMgf97kjagGk/pubhtml?gid=0&single=true",
       simpleSheet: true,
     }).then((data: any) => {
-      setPetitionNumber(data[0].Number);
+      setPetitionNumber(data);
+      console.warn(data)
     });
   }, []);
+
 
   useEffect(() => {
     if (i18n.language) {
