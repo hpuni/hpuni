@@ -1,7 +1,7 @@
 .container {
   background-image: url("../../assets/cooperate-bg.png");
   background-color: #151515;
-  background-size: 100% 329.067vw;
+  background-size: cover;
 }
 
 .inner {
