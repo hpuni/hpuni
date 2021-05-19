@@ -1,6 +1,7 @@
 .container {
   background-image: url("../../assets/cooperate-bg.png");
   background-color: #151515;
+  background-size: cover;
 }
 
 .inner {
@@ -23,15 +24,22 @@
   font-size: 1.25vw;
   line-height: 140%;
   color: #ffffff;
-  padding-left: 1.389vw;
-  padding-right: 0.694vw;
+  margin-top: 1.528vw;
 }
 
-.omon {
+.imageContainer {
   width: 36.528vw;
+  height: 20.556vw;
+  background-size: cover;
+  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.64);
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 640px) {
+  .imageContainer {
+    width: 78.667vw;
+    height: 44.533vw;
+  }
   .inner {
     margin-left: 0vw;
   }

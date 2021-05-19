@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Main />
-      {/* <Cooperate /> */}
+      <Cooperate />
       <Check
         countries={data?.countries}
         cities={data?.cities}
