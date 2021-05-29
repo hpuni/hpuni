@@ -149,6 +149,7 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
             components={{ DropdownIndicator }}
             onChange={chooseCountry}
             className="Select"
+            placeholder={t("country")}
           />
           <Select
             options={citiesOptions}
@@ -156,7 +157,7 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
             components={{ DropdownIndicator }}
             onChange={chooseCity}
             className="Select"
-            value={chosenCity.value ? chosenCity : "Select..."}
+            value={chosenCity.value ? chosenCity : t("city")}
           />
           <div className={s.blocks}>
             {partnersList.map((item: any) => {

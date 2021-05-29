@@ -1,3 +1,4 @@
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -7,8 +8,9 @@ import bchb from "../../assets/bchb.jpeg";
 import flower from "../../assets/flower.jpeg";
 import photo2 from "../../assets/photo2.jpeg";
 import women from "../../assets/women.jpeg";
+import students1 from '../../assets/students1.jpeg'
+import students2 from "../../assets/students2.jpeg";
 import "./carousel.css";
-import React from "react";
 
 class Cooperate extends React.Component {
   state = { additionalTransfrom: 0 };
@@ -132,7 +134,7 @@ class Cooperate extends React.Component {
               <p className={s.name}>
                 Сотрудники силовых структур Беларуси во время задержания
                 участника студенческой акции протеста в Минске, 1 сентября 2020
-                года. Фото - БелPAN
+                года.<br /> Фото - БелPAN
               </p>
             </div>
             <div className={s.article}>
@@ -142,7 +144,7 @@ class Cooperate extends React.Component {
               />
               <p className={s.name}>
                 Многие задержания проходят жестко, протестующих могут повалить
-                на землю, удалить или разбить технику. Фото - ТАСС.
+                на землю, удалить или разбить технику.<br /> Фото - ТАСС.
               </p>
             </div>
             <div className={s.article}>
@@ -153,7 +155,7 @@ class Cooperate extends React.Component {
               <p className={s.name}>
                 Сотрудники правоохранительных органов задерживают участника
                 студенческого митинга у Белорусского государственного
-                лингвистического университета. Фото - gettyimages
+                лингвистического университета.<br /> Фото - gettyimages
               </p>
             </div>
             <div className={s.article}>
@@ -163,7 +165,7 @@ class Cooperate extends React.Component {
               />
               <p className={s.name}>
                 Белорусские протестующие выстроились в живую цепь, сопротивляясь
-                попыткам силовиков провести задержания. Фото - EPA
+                попыткам силовиков провести задержания.<br /> Фото - EPA
               </p>
             </div>
             <div className={s.article}>
@@ -173,7 +175,29 @@ class Cooperate extends React.Component {
               />
               <p className={s.name}>
                 Студенты на акции протеста. Надпись на плакате: "Свободы
-                политическим заключенным". Фото - ИА REGNUM.
+                политическим заключенным". <br />Фото - ИА REGNUM.
+              </p>
+            </div>
+            <div className={s.article}>
+              <div
+                className={s.imageContainer}
+                style={{ backgroundImage: `url(${students1})` }}
+              />
+              <p className={s.name}>
+                Суд по «Делу студентов». Несколько десятков человек пришли к
+                зданию суда, чтобы поддержать студентов. Милиция попросила всех
+                разойтись и арестовала 14 человек.
+              </p>
+            </div>
+            <div className={s.article}>
+              <div
+                className={s.imageContainer}
+                style={{ backgroundImage: `url(${students2})` }}
+              />
+              <p className={s.name}>
+                На открытое заседание смогли попасть только близкие
+                родственники. Милиция не пустила независимых наблюдателей
+                Евросоюза, журналистов и друзей подсудимых.
               </p>
             </div>
           </Carousel>

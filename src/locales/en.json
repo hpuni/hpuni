@@ -5,7 +5,7 @@
     "repressions": "Repressions",
     "petition": "Petition",
     "cooperate": "Does your university <br /> cooperate with Belarusian universities?",
-    "invite": "Invite them to take part in an extreme student exchange.",
+    "invite": "Demand to organize an extreme student exchange to Belarus.",
     "signPetition": "Or sign a petition to stop the repression of students and teachers in the center of Europe.",
     "sign": "Sign petition",
     "tell": "Share",
@@ -48,5 +48,7 @@
     "joinButton": "join",
     "helpPeople": "Help the community of the Honest People.",
     "organize": "Activists provide assistance to affected students and teachers. The organization exists through donations.",
-    "build": "Building civil society together   "
+    "build": "Building civil society together   ",
+    "country": "Country",
+    "city": "City"
 }

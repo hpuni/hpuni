@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import OutsideClickHandler from "react-outside-click-handler";
 
 import Statistics from "../Statistics/Statistics";
 import cn from "classnames";
@@ -78,7 +79,12 @@ const Repressions: React.FC<Data> = ({ universities }) => {
               {" "}
               {t("dictator")}{" "}
             </button>
-            {isClicked && <div className={s.block}>{t("vibory")}</div>}
+            {isClicked && (
+<OutsideClickHandler onOutsideClick={() => setClicked(false)}>
+              <div className={s.block}>{t("vibory")}</div>
+              </OutsideClickHandler>
+              ) 
+            }
             {t("rectors")}
           </p>
           <div className={s.bottom}>

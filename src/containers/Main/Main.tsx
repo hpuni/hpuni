@@ -22,18 +22,18 @@ const Main = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
   const [isOpenLang, setOpenLang] = useState(false);
   const [chosenLang, setLang] = useState("ru");
-  const [petitionNumber, setPetitionNumber] = useState([]);
+  // const [petitionNumber, setPetitionNumber] = useState([]);
 
-  useEffect(() => {
-    Tabletop.init({
-      key:
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSlcizEKluVuVa2BtcCAUV1Nh3BAxKCy6GCDtRlV14kg9ENFm3LpToAoj1L0nsICQ-0LMgf97kjagGk/pubhtml?gid=0&single=true",
-      simpleSheet: true,
-    }).then((data: any) => {
-      setPetitionNumber(data);
-      console.warn(data)
-    });
-  }, []);
+  // useEffect(() => {
+  //   Tabletop.init({
+  //     key:
+  //       "https://docs.google.com/spreadsheets/d/15i1851seq4CTqEaWLNYscJhTmKePZbiWip8bi4EEQtA/edit?usp=sharing",
+  //     simpleSheet: true,
+  //   }).then((data: any) => {
+  //     setPetitionNumber(data);
+  //     console.warn(data);
+  //   });
+  // }, []);
 
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const Main = () => {
             {t("expelled")}
           </div>
           <div className={s.statBlock}>
-          <p className={s.number}>{petitionNumber}</p>
+          {/* <p className={s.number}>{petitionNumber}</p> */}
             {t("signed")}
           </div>
           <button className={s.lang} onClick={handleOpenLangSwitcher}>
@@ -153,21 +153,21 @@ const Main = () => {
               {t("expelled")}
             </div>
             <div className={s.statBlockMob}>
-            <p className={s.number}>{petitionNumber}</p>
+            {/* <p className={s.number}>{petitionNumber}</p> */}
               {t("signed")}
             </div>
           </div>
         </div>
-        <div className={s.titleMob}>EXTREME STUDENT EXCHANGE</div>
+        <div className={s.titleMob}>EXTREME STUDENT EXCHANGE BELARUS</div>
         <div className={s.top}>
           <div className={s.videoBlock}>
             <p className={s.title}>
-              EXTREME STUDENT <br /> EXCHANGE
+              EXTREME STUDENT <br /> EXCHANGE BELARUS
             </p>
             <img src={mock} className={s.video} />
           </div>
           <p className={s.edition}>
-            2021 <p className={s.belarus}>Belarus Edition</p>
+            2021 <p className={s.belarus}>Belarus<br /> Edition</p>
           </p>
         </div>
         <p className={s.cooperate} dangerouslySetInnerHTML={createTitle()} />
