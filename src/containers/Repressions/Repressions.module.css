@@ -20,6 +20,15 @@
   background: #d00a00;
 }
 
+.years {
+  font-size: 1.25vw;
+  line-height: 140%;
+  color: #e2e2e2;
+  margin-top: 1.528vw;
+  width: 48.611vw;
+  font-weight: bold;
+}
+
 .petition {
   font-family: "Normalidad";
   font-weight: 900;
@@ -142,6 +151,11 @@
     margin-left: 0;
     padding-left: 4.267vw;
     padding-right: 5.333vw;
+  }
+  .years {
+    font-size: 4.8vw;
+    line-height: 140%;
+    width: auto;
   }
   .line {
     width: 13.333vw;

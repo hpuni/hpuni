@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
+import OutsideClickHandler from "react-outside-click-handler";
 
 import vyasna from "../../assets/vyasna.png";
 import Prisoner from "../../components/Prisoner/Prisoner";
@@ -17,6 +18,7 @@ const History: React.FC<Props> = ({ stories }) => {
   const [data, setData] = useState<any>([]);
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState<string>();
+  const [isClicked, setClicked] = useState(false);
 
   const [selectedStudent, setSelectedStudent] = useState<string>();
   useEffect(() => {
@@ -42,7 +44,7 @@ const History: React.FC<Props> = ({ stories }) => {
     <div className={s.container}>
       <div className={s.inner}>
         <div className={s.top}>
-          <p className={s.title}>{t("politicalZak")}</p>
+          <p className={s.title}>{t("wait")}</p>
           <div className={s.vyasnaBlock}>
             <p className={s.vyasnaText}>
               {" "}
@@ -52,10 +54,31 @@ const History: React.FC<Props> = ({ stories }) => {
           </div>
         </div>
         <p className={s.text}>
-          {t("meet")} <strong>{t("meetStrong")}</strong> <br />
-          {t("vzglyad")}
+          {t("waitText")}
+          <button
+            className={cn(isClicked && s.lookaActive, s.looka)}
+            onClick={() => setClicked(!isClicked)}
+          >
+            {" "}
+            {t("dictator")}{" "}
+          </button>
+          <br /> {t("rectors")} <br /> {t("case")}{" "}
+          <a
+            href="https://zbsunion.by/studpolitzek/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.years}
+          >
+            {t("case2")}
+          </a>{" "}
+          <br/>
+          {t("case3")}
         </p>
-
+        {isClicked && (
+          <OutsideClickHandler onOutsideClick={() => setClicked(false)}>
+            <div className={s.block}>{t("vibory")}</div>
+          </OutsideClickHandler>
+        )}
         <img src={vyasna} alt="vyasna" className={s.vyasnaMob} />
 
         <div className={s.info}>

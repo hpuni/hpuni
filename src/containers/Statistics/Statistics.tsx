@@ -23,7 +23,7 @@ const Statistics: React.FC<Props> = ({
   const { t } = useTranslation();
 
   return (
-    <div className={s.container}>
+    <div className={s.container} id="stats">
       <div className={s.inner}>
         <div className={s.top}>
           <div className={s.line}>

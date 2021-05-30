@@ -157,6 +157,7 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
             components={{ DropdownIndicator }}
             onChange={chooseCity}
             className="Select"
+            placeholder={t("city")}
             value={chosenCity.value ? chosenCity : t("city")}
           />
           <div className={s.blocks}>
@@ -171,7 +172,9 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
                       })
                       ?.map((a: any) => {
                         return (
-                          <div className={s.university}>{a.name_abr_ru}</div>
+                          <a className={s.university} href="#repressions">
+                            {a.name_abr_ru}
+                          </a>
                         );
                       })}
                   </div>

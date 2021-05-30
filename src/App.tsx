@@ -36,8 +36,8 @@ function App() {
         belUnis={data?.belarusianUniversities}
       />
       <SpreadInfo />
-      <Repressions universities={data?.belarusianUniversities} />
       <History stories={data?.stories} />
+      <Repressions universities={data?.belarusianUniversities} />
       <Support />
       <ToDo />
       <Help />

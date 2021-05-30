@@ -14,7 +14,7 @@ type Data = {
 const Repressions: React.FC<Data> = ({ universities }) => {
   const { t, i18n } = useTranslation();
 
-  const lang = i18n.language
+  const lang = i18n.language;
 
   const [data, setData] = useState([]);
   const [active, setActive] = useState("all");
@@ -69,23 +69,10 @@ const Repressions: React.FC<Data> = ({ universities }) => {
             <div className={s.line} />
             <p className={s.petition}>{t("repressions")}</p>
           </div>
-          <p className={s.title}>{t("wait")}</p>
+          <p className={s.title}>{t("rectorsTitle")}</p>
           <p className={s.text}>
-            {t("waitText")}
-            <button
-              className={cn(isClicked && s.lookaActive, s.looka)}
-              onClick={() => setClicked(!isClicked)}
-            >
-              {" "}
-              {t("dictator")}{" "}
-            </button>
-            {isClicked && (
-<OutsideClickHandler onOutsideClick={() => setClicked(false)}>
-              <div className={s.block}>{t("vibory")}</div>
-              </OutsideClickHandler>
-              ) 
-            }
-            {t("rectors")}
+            {t("repsText")}
+            <br /> {t("repsText2")}
           </p>
           <div className={s.bottom}>
             <p className={s.data}> {t("data")}</p>
@@ -106,7 +93,7 @@ const Repressions: React.FC<Data> = ({ universities }) => {
                     key={item?.id}
                     onClick={() => setActive(item.id)}
                   >
-                    {lang === 'en' ? item.name_abr_en : item.name_abr_ru}
+                    {lang === "en" ? item.name_abr_en : item.name_abr_ru}
                   </button>
                 );
               })}

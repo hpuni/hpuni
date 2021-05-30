@@ -23,11 +23,14 @@
     "yourUni": "If your university",
     "isNot": "is not",
     "help": "help spread our program on social networks so that people know about the scale of repression against Belarusian students.",
-    "wait": "What should you expect during the program?",
+    "wait": "Arrests, searches, trials and friendship with political prisoners — what should you expect during the program?",
     "waitText": "In Belarus, universities are not independent. The university administration does not protect students, but carries out the orders of the dictator ",
-    "dictator": " A. Lukashenko: ",
+    "dictator": " A. Lukashenko.",
     "vibory": "In August 2020, elections were rigged in Belarus. In response, Belarusians went to peaceful protests. But the state unleashed a wave of repression: thousands of people were imprisoned, beaten and maimed. Any dissent is now persecuted in Belarus. People are arrested for clothes of national colors, reading books in Belarusian and singing folk songs. The administrations of Belarusian universities do not protect students, but facilitate repression.",
-    "rectors": " rectors and deans expel students, dismiss teachers, call riot police on the protesters, and report to the police.",
+    "rectors": "25 students and 1 teacher are in jail due to their civil position.",
+    "case": "Right now, a high-profile case called the 'Student Case' is pending in court. In the dock - a teacher of BSUIR, students of MSLU, BSPU, BSU, BNTU, BSAI and a graduate of BSMU.",
+    "case2": "Each of them faces up to three years in prison",
+    "case3": "for the peaceful expression of their civil position.",
     "data": "Беларуские университеты сегодня:",
     "political": "students are recognized as political prisoners",
     "studExpelled": "students are recognized as political prisoners",
@@ -50,5 +53,8 @@
     "organize": "Activists provide assistance to affected students and teachers. The organization exists through donations.",
     "build": "Building civil society together   ",
     "country": "Country",
-    "city": "City"
+    "city": "City",
+    "rectorsTitle": "Rectors and deans are also involved in repression",
+    "repsText": "The worst thing is the actions of the rectors and deans. Since the beginning of the academic year, not a single university in Belarus has spoken out in defense of its students.",
+    "repsText2": "But even worse - often administration officials themselves become the initiators of repressions: they call riot police against students, write statements to the police, expel and evict them from hostels. The administration reports directly to the security forces on the repressions carried out."
 }
