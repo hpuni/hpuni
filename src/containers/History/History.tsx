@@ -40,11 +40,15 @@ const History: React.FC<Props> = ({ stories }) => {
     }
   }, [i18n.language]);
 
+  function createTitle() {
+    return { __html: t("wait") };
+  }
+
   return (
     <div className={s.container}>
       <div className={s.inner}>
         <div className={s.top}>
-          <p className={s.title}>{t("wait")}</p>
+          <p className={s.title} dangerouslySetInnerHTML={createTitle()} />
           <div className={s.vyasnaBlock}>
             <p className={s.vyasnaText}>
               {" "}
@@ -62,7 +66,7 @@ const History: React.FC<Props> = ({ stories }) => {
             {" "}
             {t("dictator")}{" "}
           </button>
-          <br /> {t("rectors")} <br /> {t("case")}{" "}
+          <br /> {t("rectors")} <br /> {t("case")}
           <a
             href="https://zbsunion.by/studpolitzek/en"
             target="_blank"
@@ -71,7 +75,6 @@ const History: React.FC<Props> = ({ stories }) => {
           >
             {t("case2")}
           </a>{" "}
-          <br/>
           {t("case3")}
         </p>
         {isClicked && (

@@ -11,7 +11,7 @@
 .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .title {
@@ -38,8 +38,8 @@
   line-height: 170%;
   color: #e2e2e2;
   margin-top: 1.528vw;
+  width: 52vw;
 }
-
 
 .info {
   margin-top: 4.167vw;
@@ -136,13 +136,13 @@
   width: 38.958vw;
   margin-left: 30.069vw;
   z-index: 100;
-      margin-top: -7.639vw;
+  margin-top: -7.639vw;
 }
 @media screen and (max-width: 640px) {
   .inner {
     margin-left: 0;
   }
-    .block {
+  .block {
     font-size: 4.8vw;
     line-height: 140%;
     margin-left: 0;
@@ -157,11 +157,11 @@
     font-size: 4.8vw;
     line-height: 140%;
   }
-    .looka {
+  .looka {
     font-size: 4.8vw;
     line-height: 140%;
   }
-    .years {
+  .years {
     font-size: 4.8vw;
     line-height: 140%;
     width: auto;
@@ -245,6 +245,6 @@
     line-height: 140%;
     color: #ffffff;
     margin-top: 3.733vw;
-    max-width: 80vw;
+    width: auto;
   }
 }
