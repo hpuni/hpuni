@@ -1,6 +1,6 @@
-import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useTranslation } from "react-i18next";
 
 import s from "./Cooperate.module.css";
 import omon from "../../assets/omon.png";
@@ -12,79 +12,8 @@ import students1 from '../../assets/students1.jpeg'
 import students2 from "../../assets/students2.jpeg";
 import "./carousel.css";
 
-class Cooperate extends React.Component {
-  state = { additionalTransfrom: 0 };
-  render() {
-    const CustomSlider = ({ carouselState }: any) => {
-      let value = 0;
-      let carouselItemWidth = 0;
-      //@ts-ignore
-      if (this.Carousel) {
-        //@ts-ignore
-
-        carouselItemWidth = this.Carousel.state.itemWidth;
-        const maxTranslateX = Math.round(
-          // so that we don't over-slide
-          carouselItemWidth *
-            //@ts-ignore
-
-            (this.Carousel.state.totalItems -
-              //@ts-ignore
-
-              this.Carousel.state.slidesToShow) +
-            150
-        );
-        value = maxTranslateX / 100; // calculate the unit of transform for the slider
-      }
-      const { transform } = carouselState;
-
-      return (
-        <div className="custom-slider">
-          <input
-            type="range"
-            value={Math.round(Math.abs(transform) / value)}
-            defaultValue={0}
-            max={
-              (carouselItemWidth *
-                (carouselState.totalItems - carouselState.slidesToShow) +
-                (this.state.additionalTransfrom === 150 ? 0 : 150)) /
-              value
-            }
-            onChange={(e) => {
-              //@ts-ignore
-
-              if (this.Carousel.isAnimationAllowed) {
-                //@ts-ignore
-
-                this.Carousel.isAnimationAllowed = false;
-              }
-              //@ts-ignore
-
-              const nextTransform = e.target.value * value;
-              const nextSlide = Math.round(nextTransform / carouselItemWidth);
-              if (
-                //@ts-ignore
-
-                e.target.value == 0 &&
-                this.state.additionalTransfrom === 150
-              ) {
-                //@ts-ignore
-
-                this.Carousel.isAnimationAllowed = true;
-                this.setState({ additionalTransfrom: 0 });
-              }
-              //@ts-ignore
-
-              this.Carousel.setState({
-                transform: -nextTransform, // padding 20px and 5 items.
-                currentSlide: nextSlide,
-              });
-            }}
-            className="custom-slider__input"
-          />
-        </div>
-      );
-    };
+const Cooperate = () => {
+   const { t } = useTranslation();
 
     const responsive = {
       desktop: {
@@ -106,25 +35,14 @@ class Cooperate extends React.Component {
     return (
       <div className={s.container}>
         <div className={s.inner}>
-          {/* <div className={s.articles}> */}
           <Carousel
             responsive={responsive}
             showDots={false}
             autoPlay={true}
-            customButtonGroup={<CustomSlider />}
             transitionDuration={5000}
             infinite
             arrows={false}
             containerClass="carousel-container-with-scrollbar"
-            additionalTransfrom={-this.state.additionalTransfrom}
-            beforeChange={(nextSlide) => {
-              if (nextSlide !== 0 && this.state.additionalTransfrom !== 150) {
-                this.setState({ additionalTransfrom: 150 });
-              }
-              if (nextSlide === 0 && this.state.additionalTransfrom === 150) {
-                this.setState({ additionalTransfrom: 0 });
-              }
-            }}
           >
             <div className={s.article}>
               <div
@@ -132,9 +50,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${bchb})` }}
               />
               <p className={s.name}>
-                Сотрудники силовых структур Беларуси во время задержания
-                участника студенческой акции протеста в Минске, 1 сентября 2020
-                года.<br /> Фото - БелPAN
+               {t("photo5")} <br /> {t("photo")} — {t("belpan")}
               </p>
             </div>
             <div className={s.article}>
@@ -143,8 +59,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${omon})` }}
               />
               <p className={s.name}>
-                Многие задержания проходят жестко, протестующих могут повалить
-                на землю, удалить или разбить технику.<br /> Фото - ТАСС.
+               {t("photo2")} <br /> {t("photo")} — {t("tass")}.
               </p>
             </div>
             <div className={s.article}>
@@ -153,9 +68,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${photo2})` }}
               />
               <p className={s.name}>
-                Сотрудники правоохранительных органов задерживают участника
-                студенческого митинга у Белорусского государственного
-                лингвистического университета.<br /> Фото - gettyimages
+                {t("photo1")}<br /> {t("photo")} — gettyimages
               </p>
             </div>
             <div className={s.article}>
@@ -164,8 +77,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${women})` }}
               />
               <p className={s.name}>
-                Белорусские протестующие выстроились в живую цепь, сопротивляясь
-                попыткам силовиков провести задержания.<br /> Фото - EPA
+               {t("photo3")} <br /> {t("photo")} — EPA
               </p>
             </div>
             <div className={s.article}>
@@ -174,8 +86,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${flower})` }}
               />
               <p className={s.name}>
-                Студенты на акции протеста. Надпись на плакате: "Свободы
-                политическим заключенным". <br />Фото - ИА REGNUM.
+               {t("photo4")}  <br />{t("photo")} — {t("regnum")}.
               </p>
             </div>
             <div className={s.article}>
@@ -184,9 +95,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${students1})` }}
               />
               <p className={s.name}>
-                Суд по «Делу студентов». Несколько десятков человек пришли к
-                зданию суда, чтобы поддержать студентов. Милиция попросила всех
-                разойтись и арестовала 14 человек.
+                {t("photo6")}
               </p>
             </div>
             <div className={s.article}>
@@ -195,9 +104,7 @@ class Cooperate extends React.Component {
                 style={{ backgroundImage: `url(${students2})` }}
               />
               <p className={s.name}>
-                На открытое заседание смогли попасть только близкие
-                родственники. Милиция не пустила независимых наблюдателей
-                Евросоюза, журналистов и друзей подсудимых.
+                {t("photo7")}
               </p>
             </div>
           </Carousel>
@@ -205,7 +112,7 @@ class Cooperate extends React.Component {
         {/* </div> */}
       </div>
     );
-  }
+  
 }
 
 export default Cooperate;
