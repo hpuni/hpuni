@@ -29,7 +29,7 @@ const Main = () => {
   useEffect(() => {
     Tabletop.init({
       key:
-        "https://docs.google.com/spreadsheets/d/16LzNwURUv6Vx8sphP4EcpK60TL2WwBVuXFRfckzmpVQ/edit?usp=sharing",
+        "https://docs.google.com/spreadsheets/d/15i1851seq4CTqEaWLNYscJhTmKePZbiWip8bi4EEQtA/edit?usp=sharing",
       simpleSheet: true,
     }).then((data: any) => {
       const newData: any = Object.values(data[0]);
