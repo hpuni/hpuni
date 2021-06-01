@@ -32,7 +32,7 @@ const SpreadInfo = () => {
           </div>
         </div>
         <div className={s.bottom}>
-          <FacebookShareButton url={"https://www.netflix.com/browse"}>
+          <FacebookShareButton url={"http://extremeexchange.me/"}>
             <IconButton
               text={t("tell")}
               icon={fb}
@@ -40,7 +40,7 @@ const SpreadInfo = () => {
               href="https://www.facebook.com/sharer/sharer.php?u=example.org"
             />
           </FacebookShareButton>
-          <TwitterShareButton url={"https://www.netflix.com/browse"}>
+          <TwitterShareButton url={"http://extremeexchange.me/"}>
             <IconButton
               text={t("tell")}
               icon={twitter}

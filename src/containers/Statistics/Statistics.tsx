@@ -21,7 +21,7 @@ const Statistics: React.FC<Props> = ({
   fired,
   repressed,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={s.container} id="stats">
@@ -45,11 +45,20 @@ const Statistics: React.FC<Props> = ({
           </div>
         </div>
         <div className={s.bottom}>
-          <div className={s.bottomBlock}>
-            <Button text={t("sign")} />
-          </div>
+          <a
+            href={
+              i18n.language === "ru"
+                ? "http://chng.it/6zdcNSPXDx"
+                : "http://chng.it/Ys9hLmRZvz"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.button}
+          >
+            {t("sign")}
+          </a>
           <div className={s.iconButtons}>
-            <FacebookShareButton url={"https://www.netflix.com/browse"}>
+            <FacebookShareButton url={"http://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={fb}
@@ -57,7 +66,7 @@ const Statistics: React.FC<Props> = ({
                 href="https://www.facebook.com/sharer/sharer.php?u=example.org"
               />
             </FacebookShareButton>
-            <TwitterShareButton url={"https://www.netflix.com/browse"}>
+            <TwitterShareButton url={"http://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={twitter}

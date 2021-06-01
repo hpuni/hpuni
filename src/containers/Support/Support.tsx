@@ -6,7 +6,7 @@ import Button from "../../components/Button/Button";
 import s from "./Support.module.css";
 
 const Support = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={s.container} id="petition">
@@ -18,7 +18,18 @@ const Support = () => {
         <p className={s.title}>{t("support")}</p>
         <p className={s.text}>{t("signPet")}</p>
         <div className={s.bottom}>
-          <Button text={t("sign")} />
+          <a
+            href={
+              i18n.language === "ru"
+                ? "http://chng.it/6zdcNSPXDx"
+                : "http://chng.it/Ys9hLmRZvz"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.button}
+          >
+            {t("sign")}
+          </a>
           <div className={s.number}>
             ИКС
             <p className={s.signed}>{t("alreadySigned")}</p>

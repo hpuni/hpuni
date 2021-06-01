@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 //@ts-ignore
 import Tabletop from "tabletop";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
+import ReactPlayer from "react-player";
 
 import mock from "../../assets/mock_video.png";
 import texture from "../../assets/bg-texture.png";
@@ -23,18 +24,20 @@ const Main = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
   const [isOpenLang, setOpenLang] = useState(false);
   const [chosenLang, setLang] = useState("ru");
-  // const [petitionNumber, setPetitionNumber] = useState([]);
+  const [petitionNumber, setPetitionNumber] = useState([]);
+  const [jailNumber, setJailNumber] = useState([]);
+  const [firedNumber, setFiredNumber] = useState([]);
 
-  // useEffect(() => {
-  //   Tabletop.init({
-  //     key:
-  //       "https://docs.google.com/spreadsheets/d/15i1851seq4CTqEaWLNYscJhTmKePZbiWip8bi4EEQtA/edit?usp=sharing",
-  //     simpleSheet: true,
-  //   }).then((data: any) => {
-  //     setPetitionNumber(data);
-  //     console.warn(data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    Tabletop.init({
+      key:
+        "https://docs.google.com/spreadsheets/d/16LzNwURUv6Vx8sphP4EcpK60TL2WwBVuXFRfckzmpVQ/edit?usp=sharing",
+      simpleSheet: true,
+    }).then((data: any) => {
+      setPetitionNumber(data);
+      console.warn(data);
+    });
+  }, []);
 
   useEffect(() => {
     if (i18n.language) {
@@ -164,7 +167,10 @@ const Main = () => {
             <p className={s.title}>
               EXTREME STUDENT <br /> EXCHANGE BELARUS
             </p>
-            <img src={mock} className={s.video} />
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=cKMccw5eoII&ab_channel=%D0%A7%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5%D0%9B%D1%8E%D0%B4%D0%B8"
+              className={s.video}
+            />
           </div>
           <p className={s.edition}>
             2021{" "}
@@ -181,11 +187,20 @@ const Main = () => {
           {t("signPetition")}
         </p>
         <div className={s.buttons}>
-          <div className={s.buttonSubs}>
-            <Button text={t("sign")} />
-          </div>
+          <a
+            href={
+              chosenLang === "ru"
+                ? "http://chng.it/6zdcNSPXDx"
+                : "http://chng.it/Ys9hLmRZvz"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.button}
+          >
+            {t("sign")}
+          </a>
           <div className={s.iconButtons}>
-            <FacebookShareButton url={"https://www.netflix.com/browse"}>
+            <FacebookShareButton url={"http://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={fb}
@@ -193,7 +208,7 @@ const Main = () => {
                 href="https://www.facebook.com/sharer/sharer.php?u=example.org"
               />
             </FacebookShareButton>
-            <TwitterShareButton url={"https://www.netflix.com/browse"}>
+            <TwitterShareButton url={"http://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={twitter}

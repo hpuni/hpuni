@@ -81,11 +81,32 @@
   margin-left: 1.111vw;
 }
 
+.button {
+  background: #e2e2e2;
+  border-radius: 0.208vw;
+  padding: 1.319vw 1.944vw;
+  font-family: "Normalidad";
+  font-size: 1.042vw;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #151515;
+  border: none;
+  text-decoration: none;
+  margin-left: 0 !important;
+  width: fit-content;
+}
+
 @media screen and (max-width: 640px) {
   .inner {
     margin-left: 0;
     padding: 4.8vw;
     padding-bottom: 13.333vw;
+  }
+    .button {
+    width: 87.2vw;
+    font-size: 4vw;
+    padding: 5.067vw 11.467vw;
   }
   .petition {
     font-size: 3.2vw;
