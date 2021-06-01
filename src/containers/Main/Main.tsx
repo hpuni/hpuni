@@ -3,6 +3,7 @@ import cn from "classnames";
 import { useTranslation } from "react-i18next";
 //@ts-ignore
 import Tabletop from "tabletop";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import mock from "../../assets/mock_video.png";
 import texture from "../../assets/bg-texture.png";
@@ -34,7 +35,6 @@ const Main = () => {
   //     console.warn(data);
   //   });
   // }, []);
-
 
   useEffect(() => {
     if (i18n.language) {
@@ -116,7 +116,7 @@ const Main = () => {
             {t("expelled")}
           </div>
           <div className={s.statBlock}>
-          {/* <p className={s.number}>{petitionNumber}</p> */}
+            {/* <p className={s.number}>{petitionNumber}</p> */}
             {t("signed")}
           </div>
           <button className={s.lang} onClick={handleOpenLangSwitcher}>
@@ -153,7 +153,7 @@ const Main = () => {
               {t("expelled")}
             </div>
             <div className={s.statBlockMob}>
-            {/* <p className={s.number}>{petitionNumber}</p> */}
+              {/* <p className={s.number}>{petitionNumber}</p> */}
               {t("signed")}
             </div>
           </div>
@@ -167,7 +167,11 @@ const Main = () => {
             <img src={mock} className={s.video} />
           </div>
           <p className={s.edition}>
-            2021 <p className={s.belarus}>Belarus<br /> Edition</p>
+            2021{" "}
+            <p className={s.belarus}>
+              Belarus
+              <br /> Edition
+            </p>
           </p>
         </div>
         <p className={s.cooperate} dangerouslySetInnerHTML={createTitle()} />
@@ -181,18 +185,22 @@ const Main = () => {
             <Button text={t("sign")} />
           </div>
           <div className={s.iconButtons}>
-            <IconButton
-              text={t("tell")}
-              icon={fb}
-              isSmall
-              href="https://www.facebook.com/sharer/sharer.php?u=example.org"
-            />
-            <IconButton
-              text={t("tell")}
-              icon={twitter}
-              isSmall
-              href="http://twitter.com/share"
-            />
+            <FacebookShareButton url={"https://www.netflix.com/browse"}>
+              <IconButton
+                text={t("tell")}
+                icon={fb}
+                isSmall
+                href="https://www.facebook.com/sharer/sharer.php?u=example.org"
+              />
+            </FacebookShareButton>
+            <TwitterShareButton url={"https://www.netflix.com/browse"}>
+              <IconButton
+                text={t("tell")}
+                icon={twitter}
+                isSmall
+                href="http://twitter.com/share"
+              />
+            </TwitterShareButton>
           </div>
         </div>
       </div>

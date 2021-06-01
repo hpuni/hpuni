@@ -18,7 +18,10 @@ const ToDo = () => {
           </a>{" "}
           (@univer_by_bot) {t("join")}
         </p>
-        <Button text={t("joinButton")} />
+        {/* <Button text={t("joinButton")} /> */}
+        <a href="tg://resolve?domain=univer_by_bot" className={s.button}>
+          {t("joinButton")}
+        </a>
       </div>
     </div>
   );

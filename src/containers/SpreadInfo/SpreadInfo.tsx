@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import IconButton from "../../components/ButtonWithIcon/Button";
 import fb from "../../assets/rounded-fb.svg";
@@ -31,18 +32,22 @@ const SpreadInfo = () => {
           </div>
         </div>
         <div className={s.bottom}>
-          <IconButton
-            text={t("tell")}
-            icon={fb}
-            isSmall
-            href="https://www.facebook.com/sharer/sharer.php?u=example.org"
-          />
-          <IconButton
-            text={t("tell")}
-            icon={twitter}
-            isSmall
-            href="http://twitter.com/share"
-          />
+          <FacebookShareButton url={"https://www.netflix.com/browse"}>
+            <IconButton
+              text={t("tell")}
+              icon={fb}
+              isSmall
+              href="https://www.facebook.com/sharer/sharer.php?u=example.org"
+            />
+          </FacebookShareButton>
+          <TwitterShareButton url={"https://www.netflix.com/browse"}>
+            <IconButton
+              text={t("tell")}
+              icon={twitter}
+              isSmall
+              href="http://twitter.com/share"
+            />
+          </TwitterShareButton>
         </div>
       </div>
     </div>
