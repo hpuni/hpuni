@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+//@ts-ignore
+import Tabletop from "tabletop";
 
 import Button from "../../components/Button/Button";
 
@@ -7,6 +9,18 @@ import s from "./Support.module.css";
 
 const Support = () => {
   const { t, i18n } = useTranslation();
+  const [petitionNumber, setPetitionNumber] = useState([]);
+
+  useEffect(() => {
+    Tabletop.init({
+      key:
+        "https://docs.google.com/spreadsheets/d/16LzNwURUv6Vx8sphP4EcpK60TL2WwBVuXFRfckzmpVQ/edit?usp=sharing",
+      simpleSheet: true,
+    }).then((data: any) => {
+      const newData: any = Object.values(data[0]);
+      setPetitionNumber(newData[2]);
+    });
+  }, []);
 
   return (
     <div className={s.container} id="petition">
@@ -31,7 +45,7 @@ const Support = () => {
             {t("sign")}
           </a>
           <div className={s.number}>
-            ИКС
+            {petitionNumber}
             <p className={s.signed}>{t("alreadySigned")}</p>
           </div>
         </div>

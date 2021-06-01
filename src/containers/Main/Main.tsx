@@ -6,14 +6,12 @@ import Tabletop from "tabletop";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import ReactPlayer from "react-player";
 
-import mock from "../../assets/mock_video.png";
 import texture from "../../assets/bg-texture.png";
 import extreme from "../../assets/extreme.png";
 import lang from "../../assets/lang.svg";
 import IconButton from "../../components/ButtonWithIcon/Button";
 import fb from "../../assets/rounded-fb.svg";
 import twitter from "../../assets/twitter.svg";
-import Button from "../../components/Button/Button";
 import burger from "../../assets/burger.svg";
 import cross from "../../assets/cross.svg";
 import s from "./Main.module.css";
@@ -34,10 +32,14 @@ const Main = () => {
         "https://docs.google.com/spreadsheets/d/16LzNwURUv6Vx8sphP4EcpK60TL2WwBVuXFRfckzmpVQ/edit?usp=sharing",
       simpleSheet: true,
     }).then((data: any) => {
-      setPetitionNumber(data);
-      console.warn(data);
+      const newData: any = Object.values(data[0]);
+      setPetitionNumber(newData[2]);
+      setJailNumber(newData[0]);
+      setFiredNumber(newData[1]);
     });
   }, []);
+
+  console.warn(petitionNumber);
 
   useEffect(() => {
     if (i18n.language) {
@@ -111,15 +113,15 @@ const Main = () => {
         </div>
         <div className={s.stat}>
           <div className={s.statBlock}>
-            <p className={s.number}>28</p>
+            <p className={s.number}>{jailNumber}</p>
             {t("jail")}
           </div>
           <div className={s.statBlock}>
-            <p className={s.number}>274</p>
+            <p className={s.number}>{firedNumber}</p>
             {t("expelled")}
           </div>
           <div className={s.statBlock}>
-            {/* <p className={s.number}>{petitionNumber}</p> */}
+            <p className={s.number}>{petitionNumber}</p>
             {t("signed")}
           </div>
           <button className={s.lang} onClick={handleOpenLangSwitcher}>
@@ -200,7 +202,7 @@ const Main = () => {
             {t("sign")}
           </a>
           <div className={s.iconButtons}>
-            <FacebookShareButton url={"http://extremeexchange.me/"}>
+            <FacebookShareButton url={"https://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={fb}
@@ -208,7 +210,7 @@ const Main = () => {
                 href="https://www.facebook.com/sharer/sharer.php?u=example.org"
               />
             </FacebookShareButton>
-            <TwitterShareButton url={"http://extremeexchange.me/"}>
+            <TwitterShareButton url={"https://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={twitter}

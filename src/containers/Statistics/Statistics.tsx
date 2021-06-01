@@ -58,7 +58,7 @@ const Statistics: React.FC<Props> = ({
             {t("sign")}
           </a>
           <div className={s.iconButtons}>
-            <FacebookShareButton url={"http://extremeexchange.me/"}>
+            <FacebookShareButton url={"https://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={fb}
@@ -66,7 +66,7 @@ const Statistics: React.FC<Props> = ({
                 href="https://www.facebook.com/sharer/sharer.php?u=example.org"
               />
             </FacebookShareButton>
-            <TwitterShareButton url={"http://extremeexchange.me/"}>
+            <TwitterShareButton url={"https://extremeexchange.me/"}>
               <IconButton
                 text={t("tell")}
                 icon={twitter}

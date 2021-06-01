@@ -171,7 +171,7 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: 20.556vw 15.972vw 15.972vw;
+  grid-template-columns: max-content 15.972vw 15.972vw;
   margin-top: 3.889vw;
   column-gap: 1.389vw;
 }
@@ -227,7 +227,6 @@
   border: none;
   text-decoration: none;
   margin-left: 0 !important;
-  width: fit-content;
 }
 
 @media screen and (max-width: 640px) {
