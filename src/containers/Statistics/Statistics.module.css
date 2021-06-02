@@ -39,8 +39,6 @@
   column-gap: 1.389vw;
 }
 
-
-
 .iconButtons {
   display: flex;
   gap: 1.667vw;
@@ -64,7 +62,7 @@
     background-image: url("../../assets/statBackMob.png");
     background-size: cover;
   }
-    .button {
+  .button {
     width: auto;
     font-size: 4vw;
     padding: 5.067vw 9.467vw;
@@ -72,6 +70,7 @@
   .inner {
     margin-left: 0;
     padding: 11.2vw 12.533vw;
+    border-left: none;
   }
 
   .top {

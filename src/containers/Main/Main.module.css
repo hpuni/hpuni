@@ -254,6 +254,7 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 20.8vw;
+    border-left: none;
   }
   .link,
   .linkActive,

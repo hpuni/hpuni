@@ -42,6 +42,7 @@
     height: 44.533vw;
   }
   .inner {
+    border-left: none;
     margin-left: 0vw;
   }
   .article {

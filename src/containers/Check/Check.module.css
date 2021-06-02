@@ -111,6 +111,7 @@
   }
   .inner {
     margin-left: 0;
+    border-left: none;
   }
   .petition {
     font-size: 3.2vw;

@@ -53,6 +53,8 @@
   .inner {
     margin-left: 0;
     padding: 33.333vw 4.8vw;
+        border-left: none;
+
   }
   .textureMob {
     height: 136.533vw;

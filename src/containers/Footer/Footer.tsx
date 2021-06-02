@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
+import hpeng from "../../assets/hpeng.svg"
 import Tg from "../../assets/Telegram";
 import Inst from "../../assets/Inst";
 import Fb from "../../assets/Fb";
@@ -12,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import s from "./Footer.module.css";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [isEntered, setEntered] = React.useState("");
   const handleSetEntered = (value: string) => {
@@ -22,7 +23,7 @@ const Footer = () => {
     <div className={s.container}>
       <div className={s.top}>
         <div className={s.line}>
-          <img src={logo} alt="logo" className={s.logo} />
+          <img src={i18n.language === "en" ? hpeng : logo} alt="logo" className={s.logo} />
           <div className={s.icons}>
             <a
               target="_blank"

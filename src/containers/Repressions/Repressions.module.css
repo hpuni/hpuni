@@ -151,6 +151,7 @@
     margin-left: 0;
     padding-left: 4.267vw;
     padding-right: 5.333vw;
+    border-left: none;
   }
   .years {
     font-size: 4.8vw;

@@ -65,6 +65,8 @@
   .inner {
     margin-left: 0;
     padding: 16vw 4.8vw;
+        border-left: none;
+
   }
   .title {
     font-size: 5.867vw;

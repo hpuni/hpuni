@@ -57,6 +57,9 @@ a {
   .line {
     flex-direction: column;
     padding: 10.667vw 6.4vw 7.2vw 6.4vw;
+    align-items: center;
+        border-left: none;
+
   }
   .icons {
     width: 100%;
@@ -71,13 +74,20 @@ a {
     padding: 9.867vw 18.4vw;
     text-align: center;
     display: block;
+        border-left: none;
+
   }
   .text p {
     margin-bottom: 5.333vw;
+    justify-content: center;
   }
   a {
     font-size: 3.2vw;
     line-height: 140%;
     margin-top: 6.667vw;
+  }
+  .logo {
+    width: 37.333vw;
+    height: 6.4vw;
   }
 }
