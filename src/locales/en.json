@@ -1,7 +1,7 @@
 {
 
     "main": "Main",
-    "check": "Check",
+    "check": "Your university",
     "repressions": "Repressions",
     "petition": "Petition",
     "cooperate": "Does your university <br /> cooperate with Belarusian universities?",
@@ -31,7 +31,7 @@
     "case": "Right now, a high-profile case called the 'Student Case' is pending in court. In the dock - a teacher of BSUIR, students of MSLU, BSPU, BSU, BNTU, BSAI and a graduate of BSMU.",
     "case2": "Each of them faces up to three years in prison",
     "case3": "for the peaceful expression of their civil position.",
-    "data": "Беларуские университеты сегодня:",
+    "data": "BELARUSIAN UNIVERSITIES TODAY:",
     "political": "students are recognized as political prisoners",
     "studExpelled": "students are recognized as political prisoners",
     "teachers": "teachers were fired for supporting students",

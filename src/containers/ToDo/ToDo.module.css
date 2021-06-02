@@ -60,10 +60,11 @@
     width: 87.2vw;
     font-size: 4vw;
     padding: 5.067vw 11.467vw;
+   margin-bottom: 50px;
   }
   .inner {
     margin-left: 0;
-    padding: 8vw 4.8vw;
+    padding: 16vw 4.8vw;
   }
   .title {
     font-size: 5.867vw;

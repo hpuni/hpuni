@@ -67,7 +67,7 @@
     .button {
     width: auto;
     font-size: 4vw;
-    padding: 5.067vw 11.467vw;
+    padding: 5.067vw 9.467vw;
   }
   .inner {
     margin-left: 0;
@@ -93,7 +93,7 @@
     display: grid;
     grid-template-columns: none;
     flex-direction: column;
-    width: %;
+    width: 100%;
     align-items: center;
     justify-content: center;
     row-gap: 4.8vw;
@@ -107,5 +107,6 @@
     justify-content: space-between;
     align-items: center;
     gap: unset;
+    margin-bottom: 14.667vw;
   }
 }

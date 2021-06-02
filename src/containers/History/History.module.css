@@ -205,7 +205,7 @@
   .photo {
     width: 74.667vw;
     height: 74.667vw;
-    margin-top: 21.333vw;
+    margin-top: 15.333vw;
   }
   .sentence {
     background-color: #d8d8d8;
@@ -246,5 +246,6 @@
     color: #ffffff;
     margin-top: 3.733vw;
     width: 93.667vw;
+    margin-bottom: 26.667vw;
   }
 }

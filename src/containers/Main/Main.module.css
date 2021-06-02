@@ -35,6 +35,7 @@
   margin-left: 0;
   cursor: pointer;
   text-decoration: none !important;
+  max-width: 10.417vw;
 }
 
 .linkActive {
@@ -191,7 +192,7 @@
 }
 
 .langBlock {
-  max-width: 39.003px;
+  width: 4.514vw;
   font-family: "Normalidad";
   font-style: normal;
   font-weight: 900;
@@ -203,6 +204,7 @@
   background-color: #1e1e1d;
   padding: 6.998px 13.006px;
   cursor: pointer;
+  border: none;
 }
 
 .burger,
@@ -374,6 +376,13 @@
   }
   .langBlock {
     font-size: 3.733vw;
+    width: auto;
+    background-color: #090909;
+    width: 65px;
+    padding: 1.867vw 2.133vw;
+    text-align: left;
+    position: absolute;
+    top: 11.467vw;
   }
   .menu {
     display: block;

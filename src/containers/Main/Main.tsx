@@ -39,8 +39,6 @@ const Main = () => {
     });
   }, []);
 
-  console.warn(petitionNumber);
-
   useEffect(() => {
     if (i18n.language) {
       setLang(i18n.language);
@@ -76,7 +74,7 @@ const Main = () => {
           <img src={extreme} alt="extreme" className={s.extreme} />
           <a
             className={cn(active === "main" && s.linkActive, s.link)}
-            href="#"
+            href="/"
             onClick={() => {
               setActive("main");
             }}
@@ -124,19 +122,22 @@ const Main = () => {
             <p className={s.number}>{petitionNumber}</p>
             {t("signed")}
           </div>
+          <div style={{display: 'flex', flexDirection: 'column'}}>
+
           <button className={s.lang} onClick={handleOpenLangSwitcher}>
             {chosenLang.slice(0, 2)} <img src={lang} alt="lang" />
           </button>
           {isOpenLang && (
-            <div
-              className={s.langBlock}
-              onClick={() => {
-                changeLanguage(chosenLang === "ru" ? "en" : "ru");
-              }}
+            <button
+            className={s.langBlock}
+            onClick={() => {
+              changeLanguage(chosenLang === "ru" ? "en" : "ru");
+            }}
             >
               {chosenLang === "ru" ? "en" : "ru"}
-            </div>
+            </button>
           )}
+          </div>
           <img
             src={burger}
             alt="burger"
@@ -158,7 +159,7 @@ const Main = () => {
               {t("expelled")}
             </div>
             <div className={s.statBlockMob}>
-              {/* <p className={s.number}>{petitionNumber}</p> */}
+              <p className={s.number}>{petitionNumber}</p>
               {t("signed")}
             </div>
           </div>
@@ -236,7 +237,7 @@ const Main = () => {
           <div className={s.linksMob}>
             <a
               className={cn(active === "main" && s.linkActiveMob, s.linkMob)}
-              href="#"
+              href="/"
               onClick={() => {
                 setActive("main");
                 handleCloseMenu();

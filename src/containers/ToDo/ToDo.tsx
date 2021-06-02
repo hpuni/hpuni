@@ -1,7 +1,5 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
-import Button from "../../components/Button/Button";
 import s from "./ToDo.module.css";
 
 const ToDo = () => {
@@ -18,7 +16,6 @@ const ToDo = () => {
           </a>{" "}
           (@univer_by_bot) {t("join")}
         </p>
-        {/* <Button text={t("joinButton")} /> */}
         <a href="tg://resolve?domain=univer_by_bot" className={s.button}>
           {t("joinButton")}
         </a>

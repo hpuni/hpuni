@@ -1,5 +1,10 @@
-.react-multi-carousel-track {
-    /* gap: 45px; */
-    transition: all .5s !important;
-    margin-left: 179px !important;
+.slick-slider {
+  margin-right: 3.929vw !important;
+}
+
+@media screen and (max-width: 640px) {
+  .slick-slider {
+    margin-right: 9.067vw !important;
+    margin-left: 4.8vw;
+  }
 }

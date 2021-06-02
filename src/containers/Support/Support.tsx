@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 //@ts-ignore
 import Tabletop from "tabletop";
-
-import Button from "../../components/Button/Button";
 
 import s from "./Support.module.css";
 

@@ -15,7 +15,7 @@ type Data = {
 };
 
 const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [countriesData, setCountriesData] = useState<any>([]);
   const [citiesData, setCitiesData] = useState<any>([]);
@@ -26,7 +26,10 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
   const [chosenCity, setChosenCity] = useState<any>({});
 
   const countriesOptions = countriesData?.map((item: any) => {
-    return { value: item.id, label: item.name_ru };
+    return {
+      value: item.id,
+      label: i18n.language === "ru" ? item.name_ru : item.name_en,
+    };
   });
 
   useEffect(() => {
@@ -101,7 +104,7 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
 
   function chooseCountry(value: any) {
     setChosenCountry(value);
-    setChosenCity({})
+    setChosenCity({});
   }
   function chooseCity(value: any) {
     setChosenCity(value);
@@ -132,6 +135,9 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
     return { value: item.id, label: item.name };
   });
 
+  console.warn(chosenCityObj);
+  console.warn(partnersData, "dara")
+
   return (
     <div className={s.container} id="check">
       <div className={s.inner}>
@@ -142,7 +148,6 @@ const Check: React.FC<Data> = ({ countries, cities, partners, belUnis }) => {
         <p className={s.title}>{t("isCoop")}</p>
         <p className={s.text}>{t("list")}</p>
         <div className={s.choose}>
-          {/* <p className={s.chooseText}>{t("choose")}</p> */}
           <Select
             options={countriesOptions}
             styles={customStyles}

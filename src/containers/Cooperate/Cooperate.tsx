@@ -1,5 +1,4 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 
 import s from "./Cooperate.module.css";
@@ -14,35 +13,45 @@ import "./carousel.css";
 
 const Cooperate = () => {
    const { t } = useTranslation();
-
-    const responsive = {
-      desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 2,
-        slidesToSlide: 1, // optional, default to 1.
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-        slidesToSlide: 1, // optional, default to 1.
-      },
-      mobile: {
-        breakpoint: { max: 640, min: 0 },
-        items: 1,
-        slidesToSlide: 1, // optional, default to 1.
-      },
+var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     return (
       <div className={s.container}>
         <div className={s.inner}>
-          <Carousel
-            responsive={responsive}
-            showDots={false}
-            autoPlay={true}
-            transitionDuration={5000}
-            infinite
-            arrows={false}
-            containerClass="carousel-container-with-scrollbar"
+          <Slider {...settings}
           >
             <div className={s.article}>
               <div
@@ -107,7 +116,7 @@ const Cooperate = () => {
                 {t("photo7")}
               </p>
             </div>
-          </Carousel>
+          </Slider>
         </div>
         {/* </div> */}
       </div>

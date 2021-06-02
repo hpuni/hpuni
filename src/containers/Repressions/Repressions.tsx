@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import OutsideClickHandler from "react-outside-click-handler";
 
 import Statistics from "../Statistics/Statistics";
 import cn from "classnames";
@@ -18,13 +17,13 @@ const Repressions: React.FC<Data> = ({ universities }) => {
 
   const [data, setData] = useState([]);
   const [active, setActive] = useState("all");
-  const [allPoliticalPrisoners, setAllPoliticalPrisoners] = useState(0);
-  const [allExpelled, setAllExpelled] = useState(0);
-  const [isClicked, setClicked] = useState(false);
+  // const [allPoliticalPrisoners, setAllPoliticalPrisoners] = useState(0);
+  // const [allExpelled, setAllExpelled] = useState(0);
+  // const [isClicked, setClicked] = useState(false);
 
-  const [allFired, setAllFired] = useState(0);
+  // const [allFired, setAllFired] = useState(0);
 
-  const [allRepressed, setAllRepressed] = useState(0);
+  // const [allRepressed, setAllRepressed] = useState(0);
 
   useEffect(() => {
     if (universities) {
@@ -32,30 +31,30 @@ const Repressions: React.FC<Data> = ({ universities }) => {
     }
   }, [universities]);
 
-  useEffect(() => {
-    if (data) {
-      setAllPoliticalPrisoners(
-        data
-          .map((item: any) => item.political_prisoners_num)
-          .reduce((prev, next) => prev + next, 0)
-      );
-      setAllExpelled(
-        data
-          .map((item: any) => item.expelled_students_num)
-          .reduce((prev, next) => prev + next, 0)
-      );
-      setAllFired(
-        data
-          .map((item: any) => item.fired_professors_num)
-          .reduce((prev, next) => prev + next, 0)
-      );
-      setAllRepressed(
-        data
-          .map((item: any) => item.repressed_students_num)
-          .reduce((prev, next) => prev + next, 0)
-      );
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     setAllPoliticalPrisoners(
+  //       data
+  //         .map((item: any) => item.political_prisoners_num)
+  //         .reduce((prev, next) => prev + next, 0)
+  //     );
+  //     setAllExpelled(
+  //       data
+  //         .map((item: any) => item.expelled_students_num)
+  //         .reduce((prev, next) => prev + next, 0)
+  //     );
+  //     setAllFired(
+  //       data
+  //         .map((item: any) => item.fired_professors_num)
+  //         .reduce((prev, next) => prev + next, 0)
+  //     );
+  //     setAllRepressed(
+  //       data
+  //         .map((item: any) => item.repressed_students_num)
+  //         .reduce((prev, next) => prev + next, 0)
+  //     );
+  //   }
+  // }, [data]);
 
   const chosenUniversity: any = data?.filter((item: any) => {
     return item.id === active;

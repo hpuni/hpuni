@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import s from "./Statistics.module.css";
-import Button from "../../components/Button/Button";
 import IconButton from "../../components/ButtonWithIcon/Button";
 import fb from "../../assets/rounded-fb.svg";
 import twitter from "../../assets/twitter.svg";
