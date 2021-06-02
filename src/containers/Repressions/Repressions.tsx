@@ -105,22 +105,22 @@ const Repressions: React.FC<Data> = ({ universities }) => {
         political={
           chosenUniversity[0]
             ? chosenUniversity[0]?.political_prisoners_num
-            : allPoliticalPrisoners
+            : 21
         }
         expelled={
           chosenUniversity[0]
             ? chosenUniversity[0]?.expelled_students_num
-            : allExpelled
+            : 274
         }
         fired={
           chosenUniversity[0]
             ? chosenUniversity[0]?.fired_professors_num
-            : allFired
+            : 126
         }
         repressed={
           chosenUniversity[0]
             ? chosenUniversity[0]?.repressed_students_num
-            : allRepressed
+            : 595
         }
       />
     </>

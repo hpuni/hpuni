@@ -61,6 +61,7 @@
   line-height: 120%;
   text-transform: uppercase;
   color: #ffffff;
+  font-family: "Normalidad";
 }
 
 .number p:first-child {
@@ -104,7 +105,7 @@
     padding-bottom: 13.333vw;
   }
     .button {
-    width: 87.2vw;
+    width: auto;
     font-size: 4vw;
     padding: 5.067vw 11.467vw;
   }

@@ -188,7 +188,7 @@
   .prisonerMob {
     background-color: #353535;
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     z-index: 2000;
@@ -245,6 +245,6 @@
     line-height: 140%;
     color: #ffffff;
     margin-top: 3.733vw;
-    width: auto;
+    width: 93.667vw;
   }
 }

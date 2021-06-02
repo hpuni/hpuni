@@ -182,9 +182,8 @@
 }
 
 .stat {
-  margin-top: 6.944vw;
+  margin-top: 2.944vw;
 }
-
 
 .iconButtons {
   display: flex;
@@ -236,7 +235,7 @@
     position: relative;
   }
   .button {
-    width: 87.2vw;
+    width: unset;
     font-size: 4vw;
     padding: 5.067vw 11.467vw;
     min-width: unset;
@@ -372,6 +371,9 @@
     justify-content: space-between;
     align-items: center;
     gap: unset;
+  }
+  .langBlock {
+    font-size: 3.733vw;
   }
   .menu {
     display: block;

@@ -39,9 +39,11 @@
   .imageContainer {
     width: 78.667vw;
     height: 44.533vw;
+    display: none;
   }
   .inner {
     margin-left: 0vw;
+    display: none;
   }
   .article {
     width: 78.933vw;

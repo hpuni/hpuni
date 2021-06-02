@@ -65,7 +65,7 @@
     background-size: cover;
   }
     .button {
-    width: 87.2vw;
+    width: auto;
     font-size: 4vw;
     padding: 5.067vw 11.467vw;
   }
@@ -93,7 +93,7 @@
     display: grid;
     grid-template-columns: none;
     flex-direction: column;
-    width: 100%;
+    width: %;
     align-items: center;
     justify-content: center;
     row-gap: 4.8vw;
