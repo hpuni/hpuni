@@ -11,12 +11,19 @@
 }
 
 .left {
-  padding: 2.153vw 2.292vw 1.944vw 2.292vw;
+  padding: 2.153vw 2.292vw 1.944vw 1.292vw;
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
   justify-content: space-between;
+}
+
+.langList {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: -7.292vw;
 }
 
 .extreme {
@@ -90,7 +97,7 @@
   font-family: "Normalidad";
   width: 4.514vw;
   padding: 0.486vw 0.556vw;
-  margin-top: 3.056vw;
+  margin-top: 1.056vw;
   outline: none;
   cursor: pointer;
 }
@@ -183,7 +190,7 @@
 }
 
 .stat {
-  margin-top: 2.944vw;
+  margin-top: 0vw;
 }
 
 .iconButtons {
@@ -202,9 +209,10 @@
   text-transform: uppercase;
   color: #ffffff;
   background-color: #1e1e1d;
-  padding: 6.998px 13.006px;
+  padding: 6.998px 0.903vw;
   cursor: pointer;
   border: none;
+  padding-left: 0;
 }
 
 .burger,
@@ -379,11 +387,12 @@
     font-size: 3.733vw;
     width: auto;
     background-color: #090909;
-    width: 65px;
+    width: 17.333vw;
     padding: 1.867vw 2.133vw;
     text-align: left;
-    position: absolute;
-    top: 11.467vw;
+  }
+  .langList {
+    margin-top: 8vw;
   }
   .menu {
     display: block;

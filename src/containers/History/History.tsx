@@ -95,7 +95,7 @@ const History: React.FC<Props> = ({ stories }) => {
               time={
                 selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].sanction_ru
-                  : selectedStudentData[0] && lang === "en"
+                  : selectedStudentData[0] && lang !== "ru"
                   ? selectedStudentData[0].sanction_en
                   : lang === "ru"
                   ? data[0]?.sanction_ru
@@ -104,7 +104,7 @@ const History: React.FC<Props> = ({ stories }) => {
               name={
                 selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].name_ru
-                  : selectedStudentData[0] && lang === "en"
+                  : selectedStudentData[0] && lang !== "ru"
                   ? selectedStudentData[0].name_en
                   : lang === "ru"
                   ? data[0]?.name_ru
@@ -113,7 +113,7 @@ const History: React.FC<Props> = ({ stories }) => {
               university={
                 selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].university_ru
-                  : selectedStudentData[0] && lang === "en"
+                  : selectedStudentData[0] && lang !== "ru"
                   ? selectedStudentData[0].university_en
                   : lang === "ru"
                   ? data[0]?.university_ru
@@ -122,7 +122,7 @@ const History: React.FC<Props> = ({ stories }) => {
               text={
                 selectedStudentData[0] && lang === "ru"
                   ? selectedStudentData[0].story_ru
-                  : selectedStudentData[0] && lang === "en"
+                  : selectedStudentData[0] && lang !== "ru"
                   ? selectedStudentData[0].story_en
                   : lang === "ru"
                   ? data[0]?.story_ru

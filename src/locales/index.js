@@ -4,6 +4,10 @@ import { initReactI18next } from "react-i18next";
 
 import en from "./en.json";
 import ru from "./ru.json";
+import fr from "./fr.json";
+import de from "./de.json";
+import pl from "./pl.json";
+import es from "./es.json";
 
 i18n
   .use(LanguageDetector)
@@ -16,6 +20,18 @@ i18n
       },
       ru: {
         translation: ru,
+      },
+      fr: {
+        translation: fr,
+      },
+      de: {
+        translation: de,
+      },
+      pl: {
+        translation: pl,
+      },
+      es: {
+        translation: es,
       },
     },
   });

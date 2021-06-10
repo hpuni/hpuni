@@ -92,7 +92,7 @@ const Repressions: React.FC<Data> = ({ universities }) => {
                     key={item?.id}
                     onClick={() => setActive(item.id)}
                   >
-                    {lang === "en" ? item.name_abr_en : item.name_abr_ru}
+                    {lang === "ru" ? item.name_abr_ru : item.name_abr_en}
                   </button>
                 );
               })}

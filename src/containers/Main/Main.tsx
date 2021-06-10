@@ -66,6 +66,11 @@ const Main = () => {
   function createTitle() {
     return { __html: t("cooperate") };
   }
+  function createExpelled() {
+    return {
+      __html: t("expelled"),
+    };
+  }
 
   return (
     <div className={s.container}>
@@ -115,28 +120,84 @@ const Main = () => {
             {t("jail")}
           </div>
           <div className={s.statBlock}>
-            <p className={s.number}>{firedNumber}</p>
-            {t("expelled")}
+          <p  className={s.number}>  {firedNumber}</p>
+            <p
+             
+              dangerouslySetInnerHTML={createExpelled()}
+            />
           </div>
           <div className={s.statBlock}>
             <p className={s.number}>{petitionNumber}</p>
             {t("signed")}
           </div>
-          <div style={{display: 'flex', flexDirection: 'column'}}>
-
-          <button className={s.lang} onClick={handleOpenLangSwitcher}>
-            {chosenLang.slice(0, 2)} <img src={lang} alt="lang" />
-          </button>
-          {isOpenLang && (
-            <button
-            className={s.langBlock}
-            onClick={() => {
-              changeLanguage(chosenLang === "ru" ? "en" : "ru");
-            }}
-            >
-              {chosenLang === "ru" ? "en" : "ru"}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <button className={s.lang} onClick={handleOpenLangSwitcher}>
+              {chosenLang.slice(0, 2)} <img src={lang} alt="lang" />
             </button>
-          )}
+            {isOpenLang && (
+              <div className={s.langList}>
+                {chosenLang !== "en" && (
+                  <button
+                    className={s.langBlock}
+                    onClick={() => {
+                      changeLanguage("en");
+                    }}
+                  >
+                    {"en"}
+                  </button>
+                )}
+                {chosenLang !== "ru" && (
+                  <button
+                    className={s.langBlock}
+                    onClick={() => {
+                      changeLanguage("ru");
+                    }}
+                  >
+                    {"ru"}
+                  </button>
+                )}
+                {chosenLang !== "de" && (
+                  <button
+                    className={s.langBlock}
+                    onClick={() => {
+                      changeLanguage("de");
+                    }}
+                  >
+                    {"de"}
+                  </button>
+                )}
+                {chosenLang !== "fr" && (
+                  <button
+                    className={s.langBlock}
+                    onClick={() => {
+                      changeLanguage("fr");
+                    }}
+                  >
+                    {"fr"}
+                  </button>
+                )}
+                {chosenLang !== "es" && (
+                  <button
+                    className={s.langBlock}
+                    onClick={() => {
+                      changeLanguage("es");
+                    }}
+                  >
+                    {"es"}
+                  </button>
+                )}
+                {chosenLang !== "pl" && (
+                  <button
+                    className={s.langBlock}
+                    onClick={() => {
+                      changeLanguage("pl");
+                    }}
+                  >
+                    {"pl"}
+                  </button>
+                )}
+              </div>
+            )}
           </div>
           <img
             src={burger}
